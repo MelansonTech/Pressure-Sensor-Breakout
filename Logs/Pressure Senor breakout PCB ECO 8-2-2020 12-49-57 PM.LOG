@@ -1,0 +1,6 @@
+Added Pin To Net: NetName=GND Pin=R17-1
+Added Pin To Net: NetName=NetR11_2 Pin=R17-2
+Added Pin To Net: NetName=VCC Pin=R17-3
+Added Pin To Net: NetName=GND Pin=U3-2
+Added Pin To Net: NetName=1.0VREF Pin=U3-3
+Added Pin To Net: NetName=VCC Pin=U3-5

@@ -1,0 +1,12 @@
+Removed Pin From Net: NetName=1.0VREF Pin=C10-1
+Removed Pin From Net: NetName=1.0VREF Pin=R15-1
+Removed Pin From Net: NetName=1.0VREF Pin=R18-2
+Removed Pin From Net: NetName=1.0VREF Pin=U3-3
+Added Pin To Net: NetName=GND Pin=R17-1
+Added Pin To Net: NetName=NetR11_2 Pin=R17-2
+Added Pin To Net: NetName=VCC Pin=R17-3
+Added Pin To Net: NetName=1.5VDC Pin=C10-1
+Added Pin To Net: NetName=1.5VDC Pin=R15-1
+Added Pin To Net: NetName=1.5VDC Pin=R18-2
+Added Pin To Net: NetName=1.5VDC Pin=U3-3
+Added Net: Name=1.5VDC

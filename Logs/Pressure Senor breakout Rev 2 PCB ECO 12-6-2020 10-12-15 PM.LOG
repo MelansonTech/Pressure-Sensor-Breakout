@@ -1,0 +1,13 @@
+Removed Pin From Net: NetName=P\R\E\S\S\U\R\E\D\E\T\E\C\T\E\D\ Pin=D1-2
+Removed Pin From Net: NetName=P\R\E\S\S\U\R\E\D\E\T\E\C\T\E\D\ Pin=R10-1
+Removed Pin From Net: NetName=GND Pin=R17-1
+Removed Pin From Net: NetName=NetR17_2 Pin=R17-2
+Removed Pin From Net: NetName=2.5VREF Pin=R17-3
+Added Pin To Net: NetName=P\R\E\S\S\U\R\E\D\E\T\E\C\T\E\D\ Pin=D1-1
+Added Pin To Net: NetName=P\R\E\S\S\U\R\E\D\E\T\E\C\T\E\D\ Pin=Q2-3
+Added Pin To Net: NetName=GND Pin=R17-1
+Added Pin To Net: NetName=NetR17_2 Pin=R17-2
+Added Pin To Net: NetName=2.5VREF Pin=R17-3
+Added Pin To Net: NetName=NetD1_2 Pin=D1-2
+Added Pin To Net: NetName=NetD1_2 Pin=R10-1
+Added Net: Name=NetD1_2

@@ -1,0 +1,14 @@
+Project Outputs Generation Report
+---------------------------------
+Start Output Generation At 12:08:34 AM On 8/10/2021
+
+Output: ExportSTEP
+Type  : ExportSTEP
+From  : Variant [[No Variations]] of PCB Document [Pressure Senor breakout Rev 2.CSPcbDoc]
+   Generated File[Pressure Senor breakout Rev 2.step]
+
+
+Files Generated   : 1
+Documents Printed : 0
+
+Finished Output Generation At 12:08:40 AM On 8/10/2021

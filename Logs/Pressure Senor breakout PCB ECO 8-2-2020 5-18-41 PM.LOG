@@ -1,0 +1,7 @@
+Change Component Designator: OldDesignator=R11 NewDesignator=R24
+Added Pin To Net: NetName=GND Pin=R17-1
+Added Pin To Net: NetName=VCC Pin=R17-3
+Added Pin To Net: NetName=NetR17_2 Pin=R17-2
+Added Pin To Net: NetName=NetR17_2 Pin=R24-2
+Added Net: Name=NetR17_2
+Added Member To Class: ClassName=Pressure Sensor Breakout Member=Component R24 Vishay CRCW08051K00JNEA

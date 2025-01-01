@@ -1,0 +1,26 @@
+---------------------------------------------------------------------------
+NCDrill File Report For: Pressure Senor breakout Rev 2.CSPcbDoc   8/10/2021  12:08:33 AM
+---------------------------------------------------------------------------
+
+Layer Pair : Top Layer to Bottom Layer
+ASCII Plated RoundHoles File : Pressure Senor breakout Rev 2-RoundHoles-Plated.TXT
+ASCII Non-Plated RoundHoles File : Pressure Senor breakout Rev 2-RoundHoles-NonPlated.TXT
+ASCII Non-Plated SlotHoles File : Pressure Senor breakout Rev 2-SlotHoles-NonPlated.TXT
+EIA File   : Pressure Senor breakout Rev 2.DRL
+
+Tool         Hole Size           Hole Type     Hole Count Plated       Tool Travel
+---------------------------------------------------------------------------
+T1        0.2mm (7.874mil)         Round          1                0.00 mm (0.00 Inch)
+T2        0.3mm (11.811mil)        Round          55               294.45 mm (11.59 Inch)
+T3        0.65mm (25.591mil)       Round          3                5.00 mm (0.20 Inch)
+T4        1mm (39.37mil)           Round          3                5.08 mm (0.20 Inch)
+T5        1.27mm (50mil)           Round          2                5.08 mm (0.20 Inch)
+T6        1.3mm (51.181mil)        Round          6                52.00 mm (2.05 Inch)
+T7        3mm (118.11mil)          Round          6                166.00 mm (6.54 Inch)
+T8        2.2mm (86.614mil)        Round          2         NPTH   6.86 mm (0.27 Inch)
+T9        4mm (157.48mil)          Round          1         NPTH   0.00 mm (0.00 Inch)
+T10       5mm (196.85mil)          Slot           2         NPTH   7251.52 mm (285.49 Inch)
+---------------------------------------------------------------------------
+Totals                                            81               7786.00 mm (306.54 Inch)
+
+Total Processing Time (hh:mm:ss) : 00:00:00

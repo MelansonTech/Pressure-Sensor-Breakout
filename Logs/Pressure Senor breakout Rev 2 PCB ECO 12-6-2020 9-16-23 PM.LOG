@@ -1,0 +1,85 @@
+Removed Pin From Net: NetName=GND Pin=C11-2
+Removed Pin From Net: NetName=TRIGGER LEVEL Pin=J1-4
+Removed Pin From Net: NetName=TRIGLVLEXTERNAL Pin=J1-5
+Removed Pin From Net: NetName=VCC Pin=J1-7
+Removed Pin From Net: NetName=GND Pin=J1-8
+Removed Pin From Net: NetName=PRESSUREDETECTED_INVERTED Pin=Q2-3
+Removed Pin From Net: NetName=2.5VREF Pin=R14-2
+Removed Pin From Net: NetName=GND Pin=R17-1
+Removed Pin From Net: NetName=NetR17_2 Pin=R17-2
+Removed Pin From Net: NetName=VCC Pin=R17-3
+Removed Pin From Net: NetName=GND Pin=R19-1
+Removed Pin From Net: NetName=NetS1_4 Pin=U2-2
+Removed Pin From Net: NetName=NetS1_1 Pin=U2-3
+Removed Member From Class: ClassName=Pressure Sensor Breakout Member=C11
+Removed Member From Class: ClassName=Pressure Sensor Breakout Member=R19
+Change Component DesignItemId : Designator=J1 Old DesignItemId=Connector, Terminal, PCB, 8 Pos,282841-8 New DesignItemId=Conn,TH,WireTerminal,3Pos,18A,300Vdc,1935174
+Change Component DesignItemId : Designator=R13 Old DesignItemId=Res,0805,0.0O,150V New DesignItemId=Res,0805,0.0O,150V
+Change Component DesignItemId : Designator=R2 Old DesignItemId=Res,0805,1.00 kO,5%,200ppm,CRCW08051K00JNEA New DesignItemId=Res,0805,1.00 kO,5%,200ppm,CRCW08051K00JNEA
+Change Component DesignItemId : Designator=R4 Old DesignItemId=Res,0805,1.00 kO,5%,200ppm,CRCW08051K00JNEA New DesignItemId=Res,0805,1.00 kO,5%,200ppm,CRCW08051K00JNEA
+Change Component DesignItemId : Designator=R5 Old DesignItemId=Res,0805,1.00 kO,5%,200ppm,CRCW08051K00JNEA New DesignItemId=Res,0805,1.00 kO,5%,200ppm,CRCW08051K00JNEA
+Change Component DesignItemId : Designator=R11 Old DesignItemId=Res,0805,1.00 kO,5%,200ppm,CRCW08051K00JNEA New DesignItemId=Res,0805,1.00 kO,5%,200ppm,CRCW08051K00JNEA
+Change Component DesignItemId : Designator=R16 Old DesignItemId=Res,0805,1.00 kO,5%,200ppm,CRCW08051K00JNEA New DesignItemId=Res,0805,1.00 kO,5%,200ppm,CRCW08051K00JNEA
+Change Component DesignItemId : Designator=R21 Old DesignItemId=Res,0805,1.00 kO,5%,200ppm,CRCW08051K00JNEA New DesignItemId=Res,0805,1.00 kO,5%,200ppm,CRCW08051K00JNEA
+Change Component DesignItemId : Designator=R24 Old DesignItemId=Res,0805,1.00 kO,5%,200ppm,CRCW08051K00JNEA New DesignItemId=Res,0805,1.00 kO,5%,200ppm,CRCW08051K00JNEA
+Change Component DesignItemId : Designator=R23 Old DesignItemId=Res,0805,1MegO,5%,200ppm,0805W8F1005T5E New DesignItemId=Res,0805,1MegO,5%,200ppm,0805W8F1005T5E
+Change Component DesignItemId : Designator=R9 Old DesignItemId=Res,0805,2.2KO,±1%,100.0 ppm/°C,150.0 V,CRCW08052K20FKEA New DesignItemId=Res,0805,1.00 kO,5%,200ppm,CRCW08051K00JNEA
+Change Component DesignItemId : Designator=R1 Old DesignItemId=Res,0805,10.0kO,1%,100 ppm,CRCW080510K0FKTA New DesignItemId=Res,0805,10.0kO,1%,100 ppm,CRCW080510K0FKTA
+Change Component DesignItemId : Designator=R3 Old DesignItemId=Res,0805,10.0kO,1%,100 ppm,CRCW080510K0FKTA New DesignItemId=Res,0805,10.0kO,1%,100 ppm,CRCW080510K0FKTA
+Change Component DesignItemId : Designator=R7 Old DesignItemId=Res,0805,10.0kO,1%,100 ppm,CRCW080510K0FKTA New DesignItemId=Res,0805,10.0kO,1%,100 ppm,CRCW080510K0FKTA
+Change Component DesignItemId : Designator=R15 Old DesignItemId=Res,0805,10.0kO,1%,100 ppm,CRCW080510K0FKTA New DesignItemId=Res,0805,10.0kO,1%,100 ppm,CRCW080510K0FKTA
+Change Component DesignItemId : Designator=R20 Old DesignItemId=Res,0805,10.0kO,1%,100 ppm,CRCW080510K0FKTA New DesignItemId=Res,0805,10.0kO,1%,100 ppm,CRCW080510K0FKTA
+Change Component DesignItemId : Designator=R8 Old DesignItemId=Res,0805,10.0kO,1%,100 ppm,CRCW080510K0FKTA New DesignItemId=Res,0805,15KO,1%,±100ppm/°C,CRGCQ0805F15K
+Change Component DesignItemId : Designator=R10 Old DesignItemId=Res,0805,10.0kO,1%,100 ppm,CRCW080510K0FKTA New DesignItemId=Res,0805,221O,1%,100ppm,CRCW0805221RFKTA
+Change Component DesignItemId : Designator=R14 Old DesignItemId=Res,0805,15KO,1%,±100ppm/°C,CRGCQ0805F15K New DesignItemId=Res,0805,0.0O,150V, CR0805-J/-000ELF
+Change Component DesignItemId : Designator=R18 Old DesignItemId=Res,0805,15KO,1%,±100ppm/°C,CRGCQ0805F15K New DesignItemId=Res,0805,15KO,1%,±100ppm/°C,CRGCQ0805F15K
+Change Component DesignItemId : Designator=R6 Old DesignItemId=Res,0805,82.5KO,0.1%,25ppm, TNPW080582K5BEEA New DesignItemId=Res,0805,82.5KO,0.1%,25ppm, TNPW080582K5BEEA
+Change Component DesignItemId : Designator=R22 Old DesignItemId=Res,0805,100kO,1%,100ppm,CRCW0805100KFKEA New DesignItemId=Res,0805,100kO,1%,100ppm,CRCW0805100KFKEA
+Change Component DesignItemId : Designator=R12 Old DesignItemId=Res,0805,681.0 O,±1%,100.0 ppm/°C,150.0 V,CRCW0805681RFKEA New DesignItemId=Res,0805,681.0 O,±1%,100.0 ppm/°C,150.0 V,CRCW0805681RFKEA
+Change Component DesignItemId : Designator=Q2 Old DesignItemId=Trans,40V,600mA,0.33W, SMBT2222A New DesignItemId=MOSFET,N-Channel,SOT23,0.25A,60V,2N7002ET1G
+Change Component Footprint: Designator=J1 Old Footprint=Conn, wire to pcb terminal,282841-8 New Footprint=CONNECTOR,TerminalBlock,3 POS,1935174
+Change Component Comment : Designator=R9 Old Comment=CRCW08052K20FKEA New Comment=Vishay CRCW08051K00JNEA
+Change Component Comment : Designator=R14 Old Comment=CRGCQ0805F15K New Comment=CR0805-J/-000ELF
+Change Component Comment : Designator=U2 Old Comment= MCP6N11T-010E/SN New Comment=MCP6N11T-010E/SN
+Change Component Comment : Designator=Q2 Old Comment=SMBT2222A New Comment=2N7002ET1G
+Change Component Comment : Designator=J1 Old Comment=TE Connectivity 282841-8 New Comment=1935174
+Change Component Comment : Designator=U3 Old Comment= TLV9001IDBVR New Comment=TLV9001IDBVR
+Change Component Comment : Designator=R8 Old Comment=Vishay / Dale CRCW080510K0FKTA New Comment=CRGCQ0805F15K
+Change Component Comment : Designator=R10 Old Comment=Vishay / Dale CRCW080510K0FKTA New Comment=Vishay Dale CRCW0805221RFKTA
+Change Component Description : Designator=R14 Old Description=15 kOhms ±1% 0.125W, 1/8W Chip Resistor 0805 (2012 Metric) Automotive AEC-Q200, Moisture Resistant Thick Film New Description=RES SMD 0 OHM JUMPER 1/8W 0805
+Change Component Description : Designator=Q2 Old Description=NPN Silicon Switching Transistor, 40 V VCEO, 600 mA IC, SOT23, Reel, Green New Description=Small Signal MOSFET, 60 V, 310 mA, Single, N-Channel, 3-Pin SOT-23, Pb-Free, Tape and Reel
+Change Component Description : Designator=R9 Old Description=RES SMD 2.2K OHM 1% 1/8W 0805 New Description=Res Thick Film 0805 1K Ohm 5% 0.125W(1/8W) ±200ppm/C Molded SMD Automotive Paper T/R
+Change Component Description : Designator=R8 Old Description=RES SMD 10K OHM 1% 1/8W 0805 New Description=15 kOhms ±1% 0.125W, 1/8W Chip Resistor 0805 (2012 Metric) Automotive AEC-Q200, Moisture Resistant Thick Film
+Change Component Description : Designator=R10 Old Description=RES SMD 10K OHM 1% 1/8W 0805 New Description=RES SMD 221 OHM 1% 1/8W 0805
+Change Component Library : Designator=Q2 Old Library=Master JULY2019.SchLib New Library=Master DEC 2020.SchLib
+Change Component Library : Designator=R10 Old Library=Master JULY2019.SchLib New Library=Master DEC 2020.SchLib
+Change Component Library : Designator=R14 Old Library=Master JULY2019.SchLib New Library=Master DEC 2020.SchLib
+Added Component: Designator=D1(LED,SMD,Bottom Entry,1206)
+Added Component: Designator=D2(SOD123)
+Added Component: Designator=J3(CONNECTOR,TerminalBlock,3 POS,1935174)
+Added Component: Designator=J4(TERM BLOCK 2POS SIDE ENTRY 5MM)
+Added Pin To Net: NetName=PRESSUREDETECTED_INVERTED Pin=D1-2
+Added Pin To Net: NetName=VCC Pin=D2-1
+Added Pin To Net: NetName=TRIGLVLEXTERNAL Pin=J3-1
+Added Pin To Net: NetName=TRIGGER LEVEL Pin=J3-2
+Added Pin To Net: NetName=GND Pin=J3-3
+Added Pin To Net: NetName=GND Pin=J4-2
+Added Pin To Net: NetName=1.5VREF Pin=U1-5
+Added Pin To Net: NetName=NetS1_1 Pin=U2-2
+Added Pin To Net: NetName=NetS1_4 Pin=U2-3
+Change Net Name : Old Net Name=PRESSUREDETECTED_INVERTED New Net Name=P\R\E\S\S\U\R\E\D\E\T\E\C\T\E\D\
+Added Pin To Net: NetName=NetD1_1 Pin=D1-1
+Added Pin To Net: NetName=NetD1_1 Pin=Q2-3
+Added Net: Name=NetD1_1
+Added Pin To Net: NetName=NetD2_2 Pin=D2-2
+Added Pin To Net: NetName=NetD2_2 Pin=R14-2
+Added Net: Name=NetD2_2
+Added Pin To Net: NetName=NetJ4_1 Pin=J4-1
+Added Pin To Net: NetName=NetJ4_1 Pin=R14-1
+Added Net: Name=NetJ4_1
+Change Class Name : Old Net Name=Pressure Sensor Breakout New Net Name=Pressure Sensor Breakout Rev 2
+Added Member To Class: ClassName=Pressure Sensor Breakout Rev 2 Member=Component D1 LTST-C230KGKT
+Added Member To Class: ClassName=Pressure Sensor Breakout Rev 2 Member=Component D2 MBR0560
+Added Member To Class: ClassName=Pressure Sensor Breakout Rev 2 Member=Component J3 1935174
+Added Member To Class: ClassName=Pressure Sensor Breakout Rev 2 Member=Component J4 TE Connectivity 282836-2
+Added Member To Class: ClassName=Pressure Sensor Breakout Rev 2 Member=Component R11 Vishay CRCW08051K00JNEA

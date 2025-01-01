@@ -1,0 +1,7 @@
+Change Component Designator: OldDesignator=C5 NewDesignator=C11
+Added Pin To Net: NetName=NetC5_2 Pin=C5-2
+Added Pin To Net: NetName=GND Pin=R17-1
+Added Pin To Net: NetName=NetR17_2 Pin=R17-2
+Added Pin To Net: NetName=2.5VREF Pin=R17-3
+Added Member To Class: ClassName=Pressure Sensor Breakout Rev 2 Member=Component C5 08055C104JAT2A
+Added Member To Class: ClassName=Pressure Sensor Breakout Rev 2 Member=Component C11 08055C104JAT2A

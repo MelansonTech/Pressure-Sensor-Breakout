@@ -1,0 +1,36 @@
+Removed Pin From Net: NetName=GND Pin=C5-2
+Removed Pin From Net: NetName=1.5VREF Pin=R9-1
+Removed Pin From Net: NetName=GND Pin=R17-1
+Removed Pin From Net: NetName=NetR17_2 Pin=R17-2
+Removed Pin From Net: NetName=2.5VREF Pin=R17-3
+Change Component DesignItemId : Designator=R4 Old DesignItemId=Res,0805,1.00 kO,5%,200ppm,CRCW08051K00JNEA New DesignItemId=Res,0805,10.0kO,1%,100 ppm,CRCW080510K0FKTA
+Change Component DesignItemId : Designator=R9 Old DesignItemId=Res,0805,1.00 kO,5%,200ppm,CRCW08051K00JNEA New DesignItemId=Res,0805,221O,1%,100ppm,CRCW0805221RFKTA
+Change Component DesignItemId : Designator=R6 Old DesignItemId=Res,0805,82.5KO,0.1%,25ppm, TNPW080582K5BEEA New DesignItemId=Res,0805,100kO,1%,100ppm,CRCW0805100KFKEA
+Change Component Comment : Designator=R6 Old Comment=TNPW080582K5BEEA New Comment=CRCW0805100KFKEA
+Change Component Comment : Designator=R4 Old Comment=Vishay CRCW08051K00JNEA New Comment=Vishay / Dale CRCW080510K0FKTA
+Change Component Comment : Designator=R9 Old Comment=Vishay CRCW08051K00JNEA New Comment=Vishay Dale CRCW0805221RFKTA
+Change Component Description : Designator=R6 Old Description=82.5 kOhms ±0.1% 0.2W, 1/5W Chip Resistor 0805 (2012 Metric) Anti-Sulfur, Automotive AEC-Q200, Moisture Resistant Thin Film New Description=100 kOhms ±1% 0.125W, 1/8W Chip Resistor 0805 (2012 Metric) Thick Film
+Change Component Description : Designator=R4 Old Description=Res Thick Film 0805 1K Ohm 5% 0.125W(1/8W) ±200ppm/C Molded SMD Automotive Paper T/R New Description=RES SMD 10K OHM 1% 1/8W 0805
+Change Component Description : Designator=R9 Old Description=Res Thick Film 0805 1K Ohm 5% 0.125W(1/8W) ±200ppm/C Molded SMD Automotive Paper T/R New Description=RES SMD 221 OHM 1% 1/8W 0805
+Change Component Library : Designator=R4 Old Library=Master JULY2019.SchLib New Library=Master DEC 2020.SchLib
+Change Component Library : Designator=R6 Old Library=Master JULY2019.SchLib New Library=Master DEC 2020.SchLib
+Change Component Library : Designator=R9 Old Library=Master JULY2019.SchLib New Library=Master DEC 2020.SchLib
+Added Component: Designator=C5(Cap,0805)
+Added Component: Designator=R25(Res,TH,POT,TopAdj)
+Added Component: Designator=R26(res, 0805, HD)
+Added Pin To Net: NetName=1.5VREF Pin=C5-1
+Added Pin To Net: NetName=GND Pin=C5-2
+Added Pin To Net: NetName=GND Pin=R17-1
+Added Pin To Net: NetName=NetR17_2 Pin=R17-2
+Added Pin To Net: NetName=2.5VREF Pin=R17-3
+Added Pin To Net: NetName=1.5VREF Pin=R25-1
+Added Pin To Net: NetName=1.5VREF Pin=R26-2
+Added Pin To Net: NetName=NetC5_2 Pin=C5-2
+Added Pin To Net: NetName=NetC5_2 Pin=R26-1
+Added Net: Name=NetC5_2
+Added Pin To Net: NetName=NetR9_1 Pin=R9-1
+Added Pin To Net: NetName=NetR9_1 Pin=R25-2
+Added Pin To Net: NetName=NetR9_1 Pin=R25-3
+Added Net: Name=NetR9_1
+Added Member To Class: ClassName=Pressure Sensor Breakout Rev 2 Member=Component R25 CT94EW103
+Added Member To Class: ClassName=Pressure Sensor Breakout Rev 2 Member=Component R26 Vishay / Dale CRCW080510K0FKTA

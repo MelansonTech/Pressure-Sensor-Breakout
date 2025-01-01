@@ -1,0 +1,5 @@
+Change Component Comment : Designator=U3 Old Comment=TLV9001IDBVR New Comment= TLV9001IDBVR
+Change Component Description : Designator=U3 Old Description=IC CMOS 1 CIRCUIT SOT23-5 New Description= IC CMOS 1 CIRCUIT SOT23-5
+Added Pin To Net: NetName=GND Pin=R17-1
+Added Pin To Net: NetName=NetR11_2 Pin=R17-2
+Added Pin To Net: NetName=VCC Pin=R17-3

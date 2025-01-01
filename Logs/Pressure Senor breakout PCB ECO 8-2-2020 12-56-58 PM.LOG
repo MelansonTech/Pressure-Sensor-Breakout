@@ -1,0 +1,35 @@
+Removed Pin From Net: NetName=PRESSUREDETECTED Pin=J1-1
+Removed Pin From Net: NetName=PRESSUREDETECTED_INVERTED Pin=J1-2
+Removed Pin From Net: NetName=PRESSURESENSE Pin=J1-3
+Removed Pin From Net: NetName=TRIGGER LEVEL Pin=J1-4
+Removed Pin From Net: NetName=TRIGLVLEXTERNAL Pin=J1-5
+Removed Pin From Net: NetName=VCC Pin=J1-7
+Removed Pin From Net: NetName=GND Pin=J1-8
+Removed Pin From Net: NetName=GND Pin=M1-1
+Removed Pin From Net: NetName=GND Pin=R17-1
+Removed Pin From Net: NetName=NetR11_2 Pin=R17-2
+Removed Pin From Net: NetName=VCC Pin=R17-3
+Change Component DesignItemId : Designator=J1 Old DesignItemId=HEADER,0.1",8Pin,SinlgeRow New DesignItemId=Connector, Terminal, PCB, 8 Pos,282841-8
+Change Component DesignItemId : Designator=M1 Old DesignItemId=Mech,Bracket,RA,Threaded,4334 New DesignItemId=Mech,Standoff, M3, Hex
+Change Component Footprint: Designator=J1 Old Footprint=Header,8Pin,SingleRow, RA,0.1" New Footprint=Conn, wire to pcb terminal,282841-8
+Change Component Footprint: Designator=M1 Old Footprint=Mech,Bracket,RA,#6,Threaded New Footprint=Standoff,Hex,M3,8mm
+Change Component Comment : Designator=M1 Old Comment=4334 New Comment=M3 hex Standoff
+Change Component Comment : Designator=J1 Old Comment=HEADER,0.1",8Pin,SinlgeRow New Comment=TE Connectivity 282841-8
+Change Component Designator: OldDesignator=R? NewDesignator=R23
+Added Component: Designator=M2(Standoff,Hex,M3,8mm)
+Added Component: Designator=M3(Standoff,Hex,M3,8mm)
+Added Component: Designator=M4(Standoff,Hex,M3,8mm)
+Added Pin To Net: NetName=GND Pin=J1-1
+Added Pin To Net: NetName=VCC Pin=J1-2
+Added Pin To Net: NetName=TRIGLVLEXTERNAL Pin=J1-4
+Added Pin To Net: NetName=PRESSUREDETECTED_INVERTED Pin=J1-5
+Added Pin To Net: NetName=TRIGGER LEVEL Pin=J1-6
+Added Pin To Net: NetName=PRESSUREDETECTED Pin=J1-7
+Added Pin To Net: NetName=PRESSURESENSE Pin=J1-8
+Added Pin To Net: NetName=GND Pin=M1-0
+Added Pin To Net: NetName=GND Pin=M2-0
+Added Pin To Net: NetName=GND Pin=M3-0
+Added Pin To Net: NetName=GND Pin=M4-0
+Added Member To Class: ClassName=Pressure Sensor Breakout Member=Component M2 M3 hex Standoff
+Added Member To Class: ClassName=Pressure Sensor Breakout Member=Component M3 M3 hex Standoff
+Added Member To Class: ClassName=Pressure Sensor Breakout Member=Component M4 M3 hex Standoff

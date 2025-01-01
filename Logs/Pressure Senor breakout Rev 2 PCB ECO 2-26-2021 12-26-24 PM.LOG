@@ -1,0 +1,34 @@
+Removed Pin From Net: NetName=GND Pin=R17-1
+Removed Pin From Net: NetName=NetR17_2 Pin=R17-2
+Removed Pin From Net: NetName=2.5VREF Pin=R17-3
+Change Component DesignItemId : Designator=R14 Old DesignItemId=Res,0805,0.0O,150V, CR0805-J/-000ELF New DesignItemId=Res,0805,0.0O,150V, CR0805-J/-000ELF
+Change Component DesignItemId : Designator=R13 Old DesignItemId=Res,0805,0.0O,150V New DesignItemId=Res,0805,0.0O,150V
+Change Component DesignItemId : Designator=R2 Old DesignItemId=Res,0805,1.00 kO,5%,200ppm,CRCW08051K00JNEA New DesignItemId=Res,0805,1.00 kO,5%,200ppm,CRCW08051K00JNEA
+Change Component DesignItemId : Designator=R4 Old DesignItemId=Res,0805,1.00 kO,5%,200ppm,CRCW08051K00JNEA New DesignItemId=Res,0805,1.00 kO,5%,200ppm,CRCW08051K00JNEA
+Change Component DesignItemId : Designator=R5 Old DesignItemId=Res,0805,1.00 kO,5%,200ppm,CRCW08051K00JNEA New DesignItemId=Res,0805,1.00 kO,5%,200ppm,CRCW08051K00JNEA
+Change Component DesignItemId : Designator=R9 Old DesignItemId=Res,0805,1.00 kO,5%,200ppm,CRCW08051K00JNEA New DesignItemId=Res,0805,1.00 kO,5%,200ppm,CRCW08051K00JNEA
+Change Component DesignItemId : Designator=R11 Old DesignItemId=Res,0805,1.00 kO,5%,200ppm,CRCW08051K00JNEA New DesignItemId=Res,0805,1.00 kO,5%,200ppm,CRCW08051K00JNEA
+Change Component DesignItemId : Designator=R16 Old DesignItemId=Res,0805,1.00 kO,5%,200ppm,CRCW08051K00JNEA New DesignItemId=Res,0805,1.00 kO,5%,200ppm,CRCW08051K00JNEA
+Change Component DesignItemId : Designator=R21 Old DesignItemId=Res,0805,1.00 kO,5%,200ppm,CRCW08051K00JNEA New DesignItemId=Res,0805,1.00 kO,5%,200ppm,CRCW08051K00JNEA
+Change Component DesignItemId : Designator=R24 Old DesignItemId=Res,0805,1.00 kO,5%,200ppm,CRCW08051K00JNEA New DesignItemId=Res,0805,1.00 kO,5%,200ppm,CRCW08051K00JNEA
+Change Component DesignItemId : Designator=R23 Old DesignItemId=Res,0805,1MegO,5%,200ppm,0805W8F1005T5E New DesignItemId=Res,0805,1MegO,5%,200ppm,0805W8F1005T5E
+Change Component DesignItemId : Designator=R1 Old DesignItemId=Res,0805,10.0kO,1%,100 ppm,CRCW080510K0FKTA New DesignItemId=Res,0805,10.0kO,1%,100 ppm,CRCW080510K0FKTA
+Change Component DesignItemId : Designator=R3 Old DesignItemId=Res,0805,10.0kO,1%,100 ppm,CRCW080510K0FKTA New DesignItemId=Res,0805,10.0kO,1%,100 ppm,CRCW080510K0FKTA
+Change Component DesignItemId : Designator=R7 Old DesignItemId=Res,0805,10.0kO,1%,100 ppm,CRCW080510K0FKTA New DesignItemId=Res,0805,10.0kO,1%,100 ppm,CRCW080510K0FKTA
+Change Component DesignItemId : Designator=R15 Old DesignItemId=Res,0805,10.0kO,1%,100 ppm,CRCW080510K0FKTA New DesignItemId=Res,0805,10.0kO,1%,100 ppm,CRCW080510K0FKTA
+Change Component DesignItemId : Designator=R20 Old DesignItemId=Res,0805,10.0kO,1%,100 ppm,CRCW080510K0FKTA New DesignItemId=Res,0805,10.0kO,1%,100 ppm,CRCW080510K0FKTA
+Change Component DesignItemId : Designator=R8 Old DesignItemId=Res,0805,15KO,1%,±100ppm/°C,CRGCQ0805F15K New DesignItemId=Res,0805,15KO,1%,±100ppm/°C,CRGCQ0805F15K
+Change Component DesignItemId : Designator=R18 Old DesignItemId=Res,0805,15KO,1%,±100ppm/°C,CRGCQ0805F15K New DesignItemId=Res,0805,15KO,1%,±100ppm/°C,CRGCQ0805F15K
+Change Component DesignItemId : Designator=R6 Old DesignItemId=Res,0805,82.5KO,0.1%,25ppm, TNPW080582K5BEEA New DesignItemId=Res,0805,82.5KO,0.1%,25ppm, TNPW080582K5BEEA
+Change Component DesignItemId : Designator=R22 Old DesignItemId=Res,0805,100kO,1%,100ppm,CRCW0805100KFKEA New DesignItemId=Res,0805,100kO,1%,100ppm,CRCW0805100KFKEA
+Change Component DesignItemId : Designator=R10 Old DesignItemId=Res,0805,221O,1%,100ppm,CRCW0805221RFKTA New DesignItemId=Res,0805,221O,1%,100ppm,CRCW0805221RFKTA
+Change Component DesignItemId : Designator=R12 Old DesignItemId=Res,0805,681.0 O,±1%,100.0 ppm/°C,150.0 V,CRCW0805681RFKEA New DesignItemId=Res,0805,681.0 O,±1%,100.0 ppm/°C,150.0 V,CRCW0805681RFKEA
+Added Component: Designator=D3(LED,SMD,Bottom Entry,1206)
+Added Component: Designator=R19(res, 0805, HD)
+Added Pin To Net: NetName=GND Pin=D3-1
+Added Pin To Net: NetName=VCC Pin=R19-2
+Added Pin To Net: NetName=NetD3_2 Pin=D3-2
+Added Pin To Net: NetName=NetD3_2 Pin=R19-1
+Added Net: Name=NetD3_2
+Added Member To Class: ClassName=Pressure Sensor Breakout Rev 2 Member=Component D3 LTST-C230KGKT
+Added Member To Class: ClassName=Pressure Sensor Breakout Rev 2 Member=Component R19 Vishay Dale CRCW0805221RFKTA

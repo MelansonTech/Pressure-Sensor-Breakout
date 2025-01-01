@@ -1,0 +1,44 @@
+Removed Pin From Net: NetName=PRESSURESENSE Pin=C5-1
+Removed Pin From Net: NetName=1.5VREF Pin=R25-1
+Removed Pin From Net: NetName=NetR9_1 Pin=R25-2
+Removed Pin From Net: NetName=NetR9_1 Pin=R25-3
+Removed Pin From Net: NetName=1.5VREF Pin=R26-2
+Removed Pin From Net: NetName=1.5VREF Pin=R27-1
+Removed Pin From Net: NetName=NetR9_1 Pin=R27-2
+Change Component DesignItemId : Designator=C5 Old DesignItemId=Cap,0805,100nf,50V,5%,08055C104JAT2A New DesignItemId=Cap,0805,470nf,25V,10%,CGA4J2X7R1E474K125AA
+Change Component DesignItemId : Designator=R14 Old DesignItemId=Res,0805,0.0O,150V, CR0805-J/-000ELF New DesignItemId=Res,0805,0.0O,150V, CR0805-J/-000ELF
+Change Component DesignItemId : Designator=R13 Old DesignItemId=Res,0805,0.0O,150V New DesignItemId=Res,0805,0.0O,150V
+Change Component DesignItemId : Designator=R2 Old DesignItemId=Res,0805,1.00 kO,5%,200ppm,CRCW08051K00JNEA New DesignItemId=Res,0805,1.00 kO,5%,200ppm,CRCW08051K00JNEA
+Change Component DesignItemId : Designator=R5 Old DesignItemId=Res,0805,1.00 kO,5%,200ppm,CRCW08051K00JNEA New DesignItemId=Res,0805,1.00 kO,5%,200ppm,CRCW08051K00JNEA
+Change Component DesignItemId : Designator=R11 Old DesignItemId=Res,0805,1.00 kO,5%,200ppm,CRCW08051K00JNEA New DesignItemId=Res,0805,1.00 kO,5%,200ppm,CRCW08051K00JNEA
+Change Component DesignItemId : Designator=R16 Old DesignItemId=Res,0805,1.00 kO,5%,200ppm,CRCW08051K00JNEA New DesignItemId=Res,0805,1.00 kO,5%,200ppm,CRCW08051K00JNEA
+Change Component DesignItemId : Designator=R21 Old DesignItemId=Res,0805,1.00 kO,5%,200ppm,CRCW08051K00JNEA New DesignItemId=Res,0805,1.00 kO,5%,200ppm,CRCW08051K00JNEA
+Change Component DesignItemId : Designator=R24 Old DesignItemId=Res,0805,1.00 kO,5%,200ppm,CRCW08051K00JNEA New DesignItemId=Res,0805,1.00 kO,5%,200ppm,CRCW08051K00JNEA
+Change Component DesignItemId : Designator=R23 Old DesignItemId=Res,0805,1MegO,5%,200ppm,0805W8F1005T5E New DesignItemId=Res,0805,1MegO,5%,200ppm,0805W8F1005T5E
+Change Component DesignItemId : Designator=R1 Old DesignItemId=Res,0805,10.0kO,1%,100 ppm,CRCW080510K0FKTA New DesignItemId=Res,0805,10.0kO,1%,100 ppm,CRCW080510K0FKTA
+Change Component DesignItemId : Designator=R3 Old DesignItemId=Res,0805,10.0kO,1%,100 ppm,CRCW080510K0FKTA New DesignItemId=Res,0805,10.0kO,1%,100 ppm,CRCW080510K0FKTA
+Change Component DesignItemId : Designator=R4 Old DesignItemId=Res,0805,10.0kO,1%,100 ppm,CRCW080510K0FKTA New DesignItemId=Res,0805,10.0kO,1%,100 ppm,CRCW080510K0FKTA
+Change Component DesignItemId : Designator=R7 Old DesignItemId=Res,0805,10.0kO,1%,100 ppm,CRCW080510K0FKTA New DesignItemId=Res,0805,10.0kO,1%,100 ppm,CRCW080510K0FKTA
+Change Component DesignItemId : Designator=R15 Old DesignItemId=Res,0805,10.0kO,1%,100 ppm,CRCW080510K0FKTA New DesignItemId=Res,0805,10.0kO,1%,100 ppm,CRCW080510K0FKTA
+Change Component DesignItemId : Designator=R20 Old DesignItemId=Res,0805,10.0kO,1%,100 ppm,CRCW080510K0FKTA New DesignItemId=Res,0805,10.0kO,1%,100 ppm,CRCW080510K0FKTA
+Change Component DesignItemId : Designator=R8 Old DesignItemId=Res,0805,15KO,1%,±100ppm/°C,CRGCQ0805F15K New DesignItemId=Res,0805,15KO,1%,±100ppm/°C,CRGCQ0805F15K
+Change Component DesignItemId : Designator=R18 Old DesignItemId=Res,0805,15KO,1%,±100ppm/°C,CRGCQ0805F15K New DesignItemId=Res,0805,15KO,1%,±100ppm/°C,CRGCQ0805F15K
+Change Component DesignItemId : Designator=R6 Old DesignItemId=Res,0805,100kO,1%,100ppm,CRCW0805100KFKEA New DesignItemId=Res,0805,100kO,1%,100ppm,CRCW0805100KFKEA
+Change Component DesignItemId : Designator=R22 Old DesignItemId=Res,0805,100kO,1%,100ppm,CRCW0805100KFKEA New DesignItemId=Res,0805,100kO,1%,100ppm,CRCW0805100KFKEA
+Change Component DesignItemId : Designator=R9 Old DesignItemId=Res,0805,221O,1%,100ppm,CRCW0805221RFKTA New DesignItemId=Res,0805,221O,1%,100ppm,CRCW0805221RFKTA
+Change Component DesignItemId : Designator=R10 Old DesignItemId=Res,0805,221O,1%,100ppm,CRCW0805221RFKTA New DesignItemId=Res,0805,221O,1%,100ppm,CRCW0805221RFKTA
+Change Component DesignItemId : Designator=R19 Old DesignItemId=Res,0805,221O,1%,100ppm,CRCW0805221RFKTA New DesignItemId=Res,0805,221O,1%,100ppm,CRCW0805221RFKTA
+Change Component DesignItemId : Designator=R12 Old DesignItemId=Res,0805,681.0 O,±1%,100.0 ppm/°C,150.0 V,CRCW0805681RFKEA New DesignItemId=Res,0805,681.0 O,±1%,100.0 ppm/°C,150.0 V,CRCW0805681RFKEA
+Change Component DesignItemId : Designator=R25 Old DesignItemId=Res,POT,TH,10KO,0.5W,±10%,±100ppm/°C,CT94EW103 New DesignItemId=Res,0805,1.00 kO,5%,200ppm,CRCW08051K00JNEA
+Change Component Footprint: Designator=R25 Old Footprint=Res,TH,POT,TopAdj New Footprint=res, 0805, HD
+Change Component Comment : Designator=C5 Old Comment=08055C104JAT2A New Comment=CGA4J2X7R1E474K125AA
+Change Component Comment : Designator=R25 Old Comment=CT94EW103 New Comment=Vishay CRCW08051K00JNEA
+Change Component Description : Designator=C5 Old Description=Capacitor; Ceramic; Cap 0.1 uF; Tol 5%; Vol-Rtg 50 VDC; SMT; 0805; X7R; Tape & Reel New Description=0.47µF ±10% 25V Ceramic Capacitor X7R 0805 (2012 Metric)
+Change Component Library : Designator=C5 Old Library=Master JULY2019.SchLib New Library=Master Nov2021.SchLib
+Added Pin To Net: NetName=GND Pin=C5-1
+Added Pin To Net: NetName=PRESSURESENSE Pin=C5-2
+Added Pin To Net: NetName=GND Pin=R17-1
+Added Pin To Net: NetName=NetR17_2 Pin=R17-2
+Added Pin To Net: NetName=2.5VREF Pin=R17-3
+Added Pin To Net: NetName=NetR9_1 Pin=R25-1
+Added Pin To Net: NetName=1.5VREF Pin=R25-2

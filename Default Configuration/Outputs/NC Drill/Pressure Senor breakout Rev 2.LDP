@@ -1,0 +1,4 @@
+Layer Pairs Export File for PCB: E:\OneDrive\Shawn\circuitstudio projects\Pressure Sensor Breakout\Pressure Senor breakout Rev 2.CSPcbDoc
+LayersSetName=Top_Bot_Plated_Thru_Holes|DrillFile=pressure senor breakout rev 2-roundholes-plated.txt|LayerPairs=gtl,gbl
+LayersSetName=Top_Bot_NonPlated_Thru_Holes|DrillFile=pressure senor breakout rev 2-roundholes-nonplated.txt|LayerPairs=gtl,gbl
+LayersSetName=Top_Bot_NonPlated_Slot_Holes|DrillFile=pressure senor breakout rev 2-slotholes-nonplated.txt|LayerPairs=gtl,gbl

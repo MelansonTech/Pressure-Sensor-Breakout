@@ -1,0 +1,7 @@
+Added Component: Designator=S1(2SMPP03,6-SMD Module)
+Added Pin To Net: NetName=NetS1_1 Pin=S1-1
+Added Pin To Net: NetName=NetR8_2 Pin=S1-3
+Added Pin To Net: NetName=NetS1_4 Pin=S1-4
+Added Pin To Net: NetName=NetQ1_2 Pin=S1-5
+Added Pin To Net: NetName=NetQ1_2 Pin=S1-6
+Added Member To Class: ClassName=Pressure Sensor Breakout Member=Component S1 2SMPP03

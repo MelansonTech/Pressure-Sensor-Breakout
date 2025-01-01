@@ -1,0 +1,245 @@
+Change Component Designator: OldDesignator=S? NewDesignator=S1
+Added Component: Designator=C1(Cap,0805)
+Added Component: Designator=C2(Cap,0805)
+Added Component: Designator=C3(Cap,0805)
+Added Component: Designator=C4(Cap,0805)
+Added Component: Designator=C5(Cap,0805)
+Added Component: Designator=C6(Cap,0805)
+Added Component: Designator=C7(Cap,0805)
+Added Component: Designator=C8(Cap,0805)
+Added Component: Designator=C9(Cap,0805)
+Added Component: Designator=C10(Cap,0805)
+Added Component: Designator=C11(Cap,0805)
+Added Component: Designator=C12(Cap,0805)
+Added Component: Designator=C13(Cap,0805)
+Added Component: Designator=C14(Cap,0805)
+Added Component: Designator=C15(Cap,0805)
+Added Component: Designator=J1(Header,8Pin,SingleRow, RA,0.1")
+Added Component: Designator=J2(Header,3POS,0.1",Vert)
+Added Component: Designator=M1(Mech,Bracket,RA,#6,Threaded)
+Added Component: Designator=Q1(SOT23-3)
+Added Component: Designator=Q2(SOT23-3)
+Added Component: Designator=Q3(SOT23-3)
+Added Component: Designator=R1(res, 0805, HD)
+Added Component: Designator=R2(res, 0805, HD)
+Added Component: Designator=R3(res, 0805, HD)
+Added Component: Designator=R4(res, 0805, HD)
+Added Component: Designator=R5(res, 0805, HD)
+Added Component: Designator=R6(res, 0805, HD)
+Added Component: Designator=R7(res, 0805, HD)
+Added Component: Designator=R8(res, 0805, HD)
+Added Component: Designator=R9(res, 0805, HD)
+Added Component: Designator=R10(res, 0805, HD)
+Added Component: Designator=R11(res, 0805, HD)
+Added Component: Designator=R11(res, 0805, HD)
+Added Component: Designator=R12(res, 0805, HD)
+Added Component: Designator=R13(res, 0805, HD)
+Added Component: Designator=R14(res, 0805, HD)
+Added Component: Designator=R15(res, 0805, HD)
+Added Component: Designator=R16(res, 0805, HD)
+Added Component: Designator=R18(res, 0805, HD)
+Added Component: Designator=R19(res, 0805, HD)
+Added Component: Designator=R20(res, 0805, HD)
+Added Component: Designator=R21(res, 0805, HD)
+Added Component: Designator=R22(res, 0805, HD)
+Added Component: Designator=R?(res, 0805, HD)
+Added Component: Designator=U1(SOIC-8)
+Added Component: Designator=U2(SOIC-8)
+Added Component: Designator=U3(SOT23-5)
+Added Component: Designator=U4(SOT23-3)
+Added Pin To Net: NetName=1.0VREF Pin=C10-1
+Added Pin To Net: NetName=1.0VREF Pin=C11-1
+Added Pin To Net: NetName=1.0VREF Pin=R14-1
+Added Pin To Net: NetName=1.0VREF Pin=R15-1
+Added Pin To Net: NetName=1.0VREF Pin=R18-2
+Added Pin To Net: NetName=1.0VREF Pin=R19-2
+Added Pin To Net: NetName=1.0VREF Pin=U1-5
+Added Net: Name=1.0VREF
+Added Pin To Net: NetName=1.5VREF Pin=R9-1
+Added Pin To Net: NetName=1.5VREF Pin=R20-2
+Added Pin To Net: NetName=1.5VREF Pin=U2-5
+Added Pin To Net: NetName=1.5VREF Pin=U3-1
+Added Pin To Net: NetName=1.5VREF Pin=U3-4
+Added Net: Name=1.5VREF
+Added Pin To Net: NetName=2.5VREF Pin=C9-1
+Added Pin To Net: NetName=2.5VREF Pin=R12-1
+Added Pin To Net: NetName=2.5VREF Pin=R14-2
+Added Pin To Net: NetName=2.5VREF Pin=R15-2
+Added Pin To Net: NetName=2.5VREF Pin=U4-1
+Added Pin To Net: NetName=2.5VREF Pin=U4-2
+Added Net: Name=2.5VREF
+Added Pin To Net: NetName=GND Pin=C1-2
+Added Pin To Net: NetName=GND Pin=C2-2
+Added Pin To Net: NetName=GND Pin=C3-2
+Added Pin To Net: NetName=GND Pin=C4-2
+Added Pin To Net: NetName=GND Pin=C5-2
+Added Pin To Net: NetName=GND Pin=C6-1
+Added Pin To Net: NetName=GND Pin=C7-2
+Added Pin To Net: NetName=GND Pin=C8-2
+Added Pin To Net: NetName=GND Pin=C9-2
+Added Pin To Net: NetName=GND Pin=C10-2
+Added Pin To Net: NetName=GND Pin=C11-2
+Added Pin To Net: NetName=GND Pin=C12-2
+Added Pin To Net: NetName=GND Pin=C13-2
+Added Pin To Net: NetName=GND Pin=C14-1
+Added Pin To Net: NetName=GND Pin=C15-1
+Added Pin To Net: NetName=GND Pin=J1-8
+Added Pin To Net: NetName=GND Pin=M1-1
+Added Pin To Net: NetName=GND Pin=Q2-2
+Added Pin To Net: NetName=GND Pin=R8-1
+Added Pin To Net: NetName=GND Pin=R18-1
+Added Pin To Net: NetName=GND Pin=R19-1
+Added Pin To Net: NetName=GND Pin=R20-1
+Added Pin To Net: NetName=GND Pin=R22-1
+Added Pin To Net: NetName=GND Pin=U1-4
+Added Pin To Net: NetName=GND Pin=U2-4
+Added Pin To Net: NetName=GND Pin=U4-3
+Added Net: Name=GND
+Added Pin To Net: NetName=NetC2_1 Pin=C2-1
+Added Pin To Net: NetName=NetC2_1 Pin=Q1-1
+Added Pin To Net: NetName=NetC2_1 Pin=R2-1
+Added Net: Name=NetC2_1
+Added Pin To Net: NetName=NetC6_2 Pin=C6-2
+Added Pin To Net: NetName=NetC6_2 Pin=R7-1
+Added Pin To Net: NetName=NetC6_2 Pin=U2-8
+Added Net: Name=NetC6_2
+Added Pin To Net: NetName=NetC14_2 Pin=C14-2
+Added Pin To Net: NetName=NetC14_2 Pin=Q3-1
+Added Pin To Net: NetName=NetC14_2 Pin=R13-2
+Added Pin To Net: NetName=NetC14_2 Pin=R16-2
+Added Pin To Net: NetName=NetC14_2 Pin=R21-2
+Added Net: Name=NetC14_2
+Added Pin To Net: NetName=NetC15_2 Pin=C15-2
+Added Pin To Net: NetName=NetC15_2 Pin=Q3-2
+Added Pin To Net: NetName=NetC15_2 Pin=R21-1
+Added Net: Name=NetC15_2
+Added Pin To Net: NetName=NetQ1_2 Pin=Q1-2
+Added Pin To Net: NetName=NetQ1_2 Pin=S1-5
+Added Pin To Net: NetName=NetQ1_2 Pin=S1-6
+Added Net: Name=NetQ1_2
+Added Pin To Net: NetName=NetQ2_1 Pin=Q2-1
+Added Pin To Net: NetName=NetQ2_1 Pin=R11-1
+Added Net: Name=NetQ2_1
+Added Pin To Net: NetName=NetR1_1 Pin=R1-1
+Added Pin To Net: NetName=NetR1_1 Pin=R2-2
+Added Pin To Net: NetName=NetR1_1 Pin=U1-7
+Added Net: Name=NetR1_1
+Added Pin To Net: NetName=NetR4_2 Pin=R4-2
+Added Pin To Net: NetName=NetR4_2 Pin=R6-2
+Added Pin To Net: NetName=NetR4_2 Pin=U2-6
+Added Net: Name=NetR4_2
+Added Pin To Net: NetName=NetR5_2 Pin=R5-2
+Added Pin To Net: NetName=NetR5_2 Pin=R?-2
+Added Pin To Net: NetName=NetR5_2 Pin=U1-3
+Added Net: Name=NetR5_2
+Added Pin To Net: NetName=NetR6_1 Pin=R6-1
+Added Pin To Net: NetName=NetR6_1 Pin=R9-2
+Added Pin To Net: NetName=NetR6_1 Pin=U2-1
+Added Net: Name=NetR6_1
+Added Pin To Net: NetName=NetR8_2 Pin=R8-2
+Added Pin To Net: NetName=NetR8_2 Pin=S1-3
+Added Pin To Net: NetName=NetR8_2 Pin=U1-6
+Added Net: Name=NetR8_2
+Added Pin To Net: NetName=NetR11_2 Pin=R11-2
+Added Net: Name=NetR11_2
+Added Pin To Net: NetName=NetS1_1 Pin=S1-1
+Added Pin To Net: NetName=NetS1_1 Pin=S1-1
+Added Pin To Net: NetName=NetS1_1 Pin=U2-3
+Added Net: Name=NetS1_1
+Added Pin To Net: NetName=NetS1_4 Pin=S1-4
+Added Pin To Net: NetName=NetS1_4 Pin=U2-2
+Added Net: Name=NetS1_4
+Added Pin To Net: NetName=PRESSUREDETECTED_INVERTED Pin=J1-2
+Added Pin To Net: NetName=PRESSUREDETECTED_INVERTED Pin=Q2-3
+Added Pin To Net: NetName=PRESSUREDETECTED_INVERTED Pin=R10-1
+Added Net: Name=PRESSUREDETECTED_INVERTED
+Added Pin To Net: NetName=PRESSUREDETECTED Pin=J1-1
+Added Pin To Net: NetName=PRESSUREDETECTED Pin=R3-1
+Added Pin To Net: NetName=PRESSUREDETECTED Pin=R11-2
+Added Pin To Net: NetName=PRESSUREDETECTED Pin=R?-1
+Added Pin To Net: NetName=PRESSUREDETECTED Pin=U1-1
+Added Net: Name=PRESSUREDETECTED
+Added Pin To Net: NetName=PRESSURESENSE Pin=C5-1
+Added Pin To Net: NetName=PRESSURESENSE Pin=J1-3
+Added Pin To Net: NetName=PRESSURESENSE Pin=R4-1
+Added Pin To Net: NetName=PRESSURESENSE Pin=R5-1
+Added Net: Name=PRESSURESENSE
+Added Pin To Net: NetName=TRIGGER LEVEL Pin=J1-4
+Added Pin To Net: NetName=TRIGGER LEVEL Pin=J2-2
+Added Pin To Net: NetName=TRIGGER LEVEL Pin=U1-2
+Added Net: Name=TRIGGER LEVEL
+Added Pin To Net: NetName=TRIGLVLEXTERNAL_FILTERED Pin=C13-1
+Added Pin To Net: NetName=TRIGLVLEXTERNAL_FILTERED Pin=J2-3
+Added Pin To Net: NetName=TRIGLVLEXTERNAL_FILTERED Pin=Q3-3
+Added Pin To Net: NetName=TRIGLVLEXTERNAL_FILTERED Pin=R13-1
+Added Pin To Net: NetName=TRIGLVLEXTERNAL_FILTERED Pin=R22-2
+Added Net: Name=TRIGLVLEXTERNAL_FILTERED
+Added Pin To Net: NetName=TRIGLVLEXTERNAL Pin=J1-5
+Added Pin To Net: NetName=TRIGLVLEXTERNAL Pin=R16-1
+Added Net: Name=TRIGLVLEXTERNAL
+Added Pin To Net: NetName=TRIGLVLMANUAL Pin=C12-1
+Added Pin To Net: NetName=TRIGLVLMANUAL Pin=J2-1
+Added Pin To Net: NetName=TRIGLVLMANUAL Pin=R11-1
+Added Net: Name=TRIGLVLMANUAL
+Added Pin To Net: NetName=VCC Pin=C1-1
+Added Pin To Net: NetName=VCC Pin=C3-1
+Added Pin To Net: NetName=VCC Pin=C4-1
+Added Pin To Net: NetName=VCC Pin=C7-1
+Added Pin To Net: NetName=VCC Pin=C8-1
+Added Pin To Net: NetName=VCC Pin=J1-7
+Added Pin To Net: NetName=VCC Pin=Q1-3
+Added Pin To Net: NetName=VCC Pin=R1-2
+Added Pin To Net: NetName=VCC Pin=R3-2
+Added Pin To Net: NetName=VCC Pin=R7-2
+Added Pin To Net: NetName=VCC Pin=R10-2
+Added Pin To Net: NetName=VCC Pin=R12-2
+Added Pin To Net: NetName=VCC Pin=U1-8
+Added Pin To Net: NetName=VCC Pin=U2-7
+Added Net: Name=VCC
+Added Member To Class: ClassName=Pressure Sensor Breakout Member=Component C1 08055C104JAT2A
+Added Member To Class: ClassName=Pressure Sensor Breakout Member=Component C2 08055C104JAT2A
+Added Member To Class: ClassName=Pressure Sensor Breakout Member=Component C3 08055C104JAT2A
+Added Member To Class: ClassName=Pressure Sensor Breakout Member=Component C4 08055C104JAT2A
+Added Member To Class: ClassName=Pressure Sensor Breakout Member=Component C5 08055C104JAT2A
+Added Member To Class: ClassName=Pressure Sensor Breakout Member=Component C6 08055C104JAT2A
+Added Member To Class: ClassName=Pressure Sensor Breakout Member=Component C7 08055C104JAT2A
+Added Member To Class: ClassName=Pressure Sensor Breakout Member=Component C8 08055C104JAT2A
+Added Member To Class: ClassName=Pressure Sensor Breakout Member=Component C9 08055C104JAT2A
+Added Member To Class: ClassName=Pressure Sensor Breakout Member=Component C10 08055C104JAT2A
+Added Member To Class: ClassName=Pressure Sensor Breakout Member=Component C11 08055C104JAT2A
+Added Member To Class: ClassName=Pressure Sensor Breakout Member=Component C12 08055C104JAT2A
+Added Member To Class: ClassName=Pressure Sensor Breakout Member=Component C13 08055C104JAT2A
+Added Member To Class: ClassName=Pressure Sensor Breakout Member=Component C14 Cap
+Added Member To Class: ClassName=Pressure Sensor Breakout Member=Component C15 Cap
+Added Member To Class: ClassName=Pressure Sensor Breakout Member=Component J1 HEADER,0.1",8Pin,SinlgeRow
+Added Member To Class: ClassName=Pressure Sensor Breakout Member=Component J2 Generic Header
+Added Member To Class: ClassName=Pressure Sensor Breakout Member=Component M1 4334
+Added Member To Class: ClassName=Pressure Sensor Breakout Member=Component Q1 SMBT2222A
+Added Member To Class: ClassName=Pressure Sensor Breakout Member=Component Q2 SMBT2222A
+Added Member To Class: ClassName=Pressure Sensor Breakout Member=Component Q3 NPN
+Added Member To Class: ClassName=Pressure Sensor Breakout Member=Component R1 Vishay / Dale CRCW080510K0FKTA
+Added Member To Class: ClassName=Pressure Sensor Breakout Member=Component R2 Vishay CRCW08051K00JNEA
+Added Member To Class: ClassName=Pressure Sensor Breakout Member=Component R3 Vishay / Dale CRCW080510K0FKTA
+Added Member To Class: ClassName=Pressure Sensor Breakout Member=Component R4 Vishay CRCW08051K00JNEA
+Added Member To Class: ClassName=Pressure Sensor Breakout Member=Component R5 Vishay CRCW08051K00JNEA
+Added Member To Class: ClassName=Pressure Sensor Breakout Member=Component R6 TNPW080582K5BEEA
+Added Member To Class: ClassName=Pressure Sensor Breakout Member=Component R7 Vishay / Dale CRCW080510K0FKTA
+Added Member To Class: ClassName=Pressure Sensor Breakout Member=Component R8 Vishay / Dale CRCW080510K0FKTA
+Added Member To Class: ClassName=Pressure Sensor Breakout Member=Component R9 CRCW08052K20FKEA
+Added Member To Class: ClassName=Pressure Sensor Breakout Member=Component R10 Vishay / Dale CRCW080510K0FKTA
+Added Member To Class: ClassName=Pressure Sensor Breakout Member=Component R11 Vishay CRCW08051K00JNEA
+Added Member To Class: ClassName=Pressure Sensor Breakout Member=Component R12 CRCW0805681RFKEA
+Added Member To Class: ClassName=Pressure Sensor Breakout Member=Component R13 Res1
+Added Member To Class: ClassName=Pressure Sensor Breakout Member=Component R14 CRGCQ0805F15K
+Added Member To Class: ClassName=Pressure Sensor Breakout Member=Component R15 Vishay / Dale CRCW080510K0FKTA
+Added Member To Class: ClassName=Pressure Sensor Breakout Member=Component R16 Vishay CRCW08051K00JNEA
+Added Member To Class: ClassName=Pressure Sensor Breakout Member=Component R18 CRGCQ0805F15K
+Added Member To Class: ClassName=Pressure Sensor Breakout Member=Component R19 Vishay / Dale CRCW080510K0FKTA
+Added Member To Class: ClassName=Pressure Sensor Breakout Member=Component R20 Vishay / Dale CRCW080510K0FKTA
+Added Member To Class: ClassName=Pressure Sensor Breakout Member=Component R21 Vishay CRCW08051K00JNEA
+Added Member To Class: ClassName=Pressure Sensor Breakout Member=Component R22 Res,0805,100kO,1%,100ppm,CRCW0805100KFKEA
+Added Member To Class: ClassName=Pressure Sensor Breakout Member=Component R? CR0805-JW-105ELF
+Added Member To Class: ClassName=Pressure Sensor Breakout Member=Component U1 LM393DT
+Added Member To Class: ClassName=Pressure Sensor Breakout Member=Component U2  MCP6N11T-010E/SN
+Added Member To Class: ClassName=Pressure Sensor Breakout Member=Component U3 TLV9001IDBVR
+Added Member To Class: ClassName=Pressure Sensor Breakout Member=Component U4 Shunt Regulator,2.5Vdc TL431IDBZT

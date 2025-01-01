@@ -1,0 +1,838 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+                    *{
+                    margin:0;
+                    padding: 0;
+                    }
+
+                    body {
+                    margin:3em;
+                    font-family: OpenSans;
+                    font-size: 0.875em;
+                    font-weight: 400;
+                    line-height: 1.438em;
+                    color:  #2d2d2d;
+                    width:1100px;
+                    }
+
+                    h1, h2, h3, h4, h5, h6 {
+                    padding: 0.3em 0;
+                    color : #444444;
+                    font-family: Gotham;
+                    font-size: 1.643em;
+                    font-weight: 300;
+                    line-height: 1.714em;
+                    }
+
+                    td, th {
+                    text-align : left;
+                    width : 8em;
+                    padding: 0.5em 0.5em 0.5em 0;
+                    font-weight: 400;
+                    }
+
+                    th.column1, td.column1 {
+                    text-align: left;
+                    width : auto;
+                    }
+
+                    table {
+                    width : 100%;
+                    border-collapse:collapse;
+                    }
+
+                    table td {border-bottom:1px solid #ececec;}
+
+                    .header_holder td {border-bottom:0px;}
+
+                    .DRC_summary_header {
+                    padding-bottom : 0.1em;
+                    width: 100%;
+                    align: left;
+                    }
+
+                    .DRC_summary_header_col1,
+                    .DRC_summary_header_col3
+                    {
+                    padding : 0em;
+                    padding-top : 0.2em;
+                    padding-bottom 0.2: 0em;
+                    width : auto;
+                    vertical-align: top;
+                    }
+
+                    .DRC_summary_header_col3
+                    {
+                    text-align: left;
+                    }
+
+                    .header_holder
+                    {
+                    Width = 100%;
+                    padding = 0;
+                    }
+
+                    .front_matter, .front_matter_column1, .front_matter_column3
+                    {
+                    left:0;
+                    top:0;
+                    padding-top : 0.1em;
+                    width : 100%;
+                    vertical-align: top
+
+                    }
+                    .front_matter {
+
+                    margin-top: 5px;
+                    margin-left: 0px;
+                    horizontal-align: left;
+                    }
+
+
+                    .front_matter_column1, .DRC_summary_header_col1
+                    {
+                    width : 8em;
+                    padding-right:0.1em;
+                    }
+
+                    .front_matter_column3 {
+                    width         : auto;
+                    text-align    : left;
+                    margin-right  : 0.5em;
+                    }
+
+                    .total_column1, .total_column {
+                    font-weight : bold;
+                    }
+                    .total_column1 {
+                    text-align : right;
+                    }
+                    .warning, .error {
+                    color : red;
+                    font-weight : bold;
+                    }
+                    tr.onmouseout_odd {
+
+                    }
+                    tr.onmouseout_even {
+
+                    }
+                    tr.onmouseover_odd, tr.onmouseover_even {
+
+                    }
+                    p.contents_level1 {
+                    font-weight : bold;
+                    font-size : 1.143em;
+                    margin : 0.5em;
+                    }
+                    p.contents_level2 {
+                    position : relative;
+                    left : 20px;
+                    margin : 0.5em;
+                    }
+
+                    th, .front_matter_column1, .DRC_summary_header_col1, .total_title
+                    {
+                    color:  #6a6a6a;
+                    }
+
+                    a, a:link, a:visited, .q a:link,.q a:active,.q {
+                    color: #1e90b3;
+                    text-decoration: none;
+                    }
+
+                    a.callback, a:link.callback, a:visited.callback {
+                    color: #1e90b3;
+                    }
+                    a:hover, a.callback:hover
+                    {
+                    color: #6a6a6a;
+                    }
+                    .summary-title
+                    {
+                    text-transform:uppercase;
+                    }
+                    input
+                    {
+                    margin-right:0.5em;
+                    }
+                    #radio_mil
+                    {
+                    margin-left: 0.7em;
+                    }
+                </style><script type="text/javascript">
+                    function coordToMils(coord) {
+                    var number = coord / 10000;
+
+                    if (number != number.toFixed(3))
+                    number = number.toFixed(3);
+
+                    return number + 'mil'
+                    }
+
+                    function coordToMM(coord) {
+                    var number = 0.0254 * coord / 10000;
+
+                    if (number != number.toFixed(4))
+                    number = number.toFixed(4);
+
+                    return number + 'mm'
+                    }
+
+                    function convertCoord(coordNode, units) {
+                    for (var i = 0; i < coordNode.childNodes.length; i++) {
+                    coordNode.removeChild(coordNode.childNodes[i]);
+                    }
+
+                    var coord = coordNode.getAttribute('value');
+                    if (coord != null) {
+                    if (units == 'mm') {
+                    textNode = document.createTextNode(coordToMM(coord));
+                    coordNode.appendChild(textNode);
+                    } else if (units == 'mil') {
+                    textNode = document.createTextNode(coordToMils(coord));
+                    coordNode.appendChild(textNode);
+                    }
+                    }
+                    }
+
+                    function convertUnits(unitNode, units) {
+                    for (var i = 0; i < unitNode.childNodes.length; i++) {
+                    unitNode.removeChild(unitNode.childNodes[i]);
+                    }
+
+                    textNode = document.createTextNode(units);
+                    unitNode.appendChild(textNode);
+                    }
+
+                    function changeUnits(radio_input, units) {
+                    if (radio_input.checked) {
+
+                    var elements = document.getElementsByName('coordinate');
+                    if (elements) {
+                    for (var i = 0; i < elements.length; i++) {
+                    convertCoord(elements[i], units);
+                    }
+                    }
+
+                    var elements = document.getElementsByName('units');
+                    if (elements) {
+                    for (var i = 0; i < elements.length; i++) {
+                    convertUnits(elements[i], units);
+                    }
+                    }
+                    }
+                    }
+                </script></head>
+<body onload=""><img ALT="Altium" src="
+                file://E:\OneDrive\Shawn\CS Shared\Templates\CircuitStudio_logo.png
+            "><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<tr>
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column3">3/20/2021</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column3">3:31:40 PM</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column3">00:00:01</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column3"><a href="
+                file:///C:\Users\shawn\OneDrive\Shawn\circuitstudio projects\Pressure Sensor Breakout\Pressure Senor breakout Rev 2.CSPcbDoc" class="file" title="C:\Users\shawn\OneDrive\Shawn\circuitstudio projects\Pressure Sensor Breakout\Pressure Senor breakout Rev 2.CSPcbDoc">C:\Users\shawn\OneDrive\Shawn\circuitstudio projects\Pressure Sensor Breakout\Pressure Senor breakout Rev 2.CSPcbDoc</a></td>
+</tr>
+</table>
+</td>
+<td valign="top">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Errors:
+                                </td>
+<td class="DRC_summary_header_col3">0</td>
+</tr>
+<tr>
+<td class="DRC_summary_header_col1">Warnings:
+                                </td>
+<td class="DRC_summary_header_col3">0</td>
+</tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:
+                                </td>
+<td class="DRC_summary_header_col3" style="color : red">20</td>
+</tr>
+</table>
+</td>
+</tr>
+</table><a name="IDDLIAWX0ND4IEEYX1HMAJ4WUEWL2TI1BKC3U4KVH0K2ICQ4HNOZH"><h2 class="summary-title">Summary</h2></a><table>
+<tr>
+<th class="column1">Errors</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1"></td>
+<td class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1"></td>
+<td class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="
+                                        #IDH40ZCSNTTRLQCWCINW4BLMCUJBZI2YSI3F02MEBVDG0NMWD3GEBB">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="
+                                        #IDEKKL3WJYDB34IU0DCFC2D5ACRNZORIOI3SXDMRECTKJTE44QF3EG">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="
+                                        #IDHLBZ4AVUOYRKCIJPNQNIOFYOKIN0OJK4QOYK20L5R2FNBKXHYTEJ">Clearance Constraint (Gap=0.1mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="
+                                        #IDS5B5MBRC4IVVJZQ2SGLKVPQNTNC22E5XLECNZCH2PBCI55D1GDFN">Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="
+                                        #IDL4IJSA34LTJBFZB2JMLSGYAAMNUL0YT54WOTIFBKSXTU5B10ZKYG">Width Constraint (Min=0.254mm) (Max=10mm) (Preferred=0.254mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="
+                                        #IDLNA3HLOL1EHBNJDQMGHXLXSNAOB0WG0MBFJI0VNGHWNKJWUUODDM">Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="
+                                        #IDOKZYW554AJHNFDKQHAY4UY1PADKEX4NDGIFFNIJYAC41XETZUGFB">Hole Size Constraint (Min=0.025mm) (Max=10mm) (All)</a></td>
+<td class="column2">2</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="
+                                        #IDRBLFXSVOZ020I2JTVPMO1DKDEOG1XX4IOXK05POHGD2KS2PYSGJN">Hole To Hole Clearance (Gap=0.254mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="
+                                        #ID31CZ05PYOKENBPT24YHIINFSQBBCN1C2A04TVBGGYEBTQPVKMCDI">Minimum Solder Mask Sliver (Gap=0.05mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="
+                                        #IDBXMG4HRV1PMTWXLIQEK1KSIBPG4BH2QUCIRTTJAAZ0HALVE4K2P">Silk To Solder Mask (Clearance=0.1mm) (IsPad),(All)</a></td>
+<td class="column2">13</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="
+                                        #ID3NZ14XOHT55KFLWPIGXRAQLFRDWZZLZ5QCXLMFB0SF4C50MQA3ZJ">Silk to Silk (Clearance=0.1mm) (All),(All)</a></td>
+<td class="column2">5</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="
+                                        #IDBLH5HKUJXHBIOKGMCGYUBYRY0EJAVMYPG5NC51NB34HW0RGLT5H">Silk primitive without silk layer</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="
+                                        #IDSUP25Z4PK3STJLWSVSY21XM3RBYB245RHJRZLNF5ULKHWBMTHKAO">Unpoured Polygon (Allow unpoured: False)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1"></td>
+<td class="column2"><span class="total_title">Total</span><br>20</td>
+</tr>
+</table><br><a name="IDOKZYW554AJHNFDKQHAY4UY1PADKEX4NDGIFFNIJYAC41XETZUGFB"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Hole Size Constraint (Min=0.025mm) (Max=10mm) (All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="
+            dxpprocess://PCB:Zoom?
+                document=C:\Users\shawn\OneDrive\Shawn\circuitstudio projects\Pressure Sensor Breakout\Pressure Senor breakout Rev 2.CSPcbDoc;
+            
+                viewname=PCBEditor;
+            Action=AREA_DYNAMICZOOM|Location1.X=1436.382mil|Location2.X=1910.073mil|Location1.Y=1062.179mil|Location2.Y=1535.87mil|Absolute=True" class="callback" title="
+            dxpprocess://PCB:Zoom?
+                document=C:\Users\shawn\OneDrive\Shawn\circuitstudio projects\Pressure Sensor Breakout\Pressure Senor breakout Rev 2.CSPcbDoc;
+            
+                viewname=PCBEditor;
+            Action=AREA_DYNAMICZOOM|Location1.X=1436.382mil|Location2.X=1910.073mil|Location1.Y=1062.179mil|Location2.Y=1535.87mil|Absolute=True">Hole Size Constraint (12mm &gt; 10mm) : Pad Free-0(-7mm,9mm)  Multi-Layer</a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="
+            dxpprocess://PCB:Zoom?
+                document=C:\Users\shawn\OneDrive\Shawn\circuitstudio projects\Pressure Sensor Breakout\Pressure Senor breakout Rev 2.CSPcbDoc;
+            
+                viewname=PCBEditor;
+            Action=AREA_DYNAMICZOOM|Location1.X=1987.564mil|Location2.X=2461.254mil|Location1.Y=1062.179mil|Location2.Y=1535.87mil|Absolute=True" class="callback" title="
+            dxpprocess://PCB:Zoom?
+                document=C:\Users\shawn\OneDrive\Shawn\circuitstudio projects\Pressure Sensor Breakout\Pressure Senor breakout Rev 2.CSPcbDoc;
+            
+                viewname=PCBEditor;
+            Action=AREA_DYNAMICZOOM|Location1.X=1987.564mil|Location2.X=2461.254mil|Location1.Y=1062.179mil|Location2.Y=1535.87mil|Absolute=True">Hole Size Constraint (12mm &gt; 10mm) : Pad Free-0(7mm,9mm)  Multi-Layer</a><br></td>
+</tr>
+</table></a><br><a href="#top">Back to top</a><br><br><a name="IDBXMG4HRV1PMTWXLIQEK1KSIBPG4BH2QUCIRTTJAAZ0HALVE4K2P"><table>
+<tr>
+<th style="text-align : left" colspan="2" class="rule">Silk To Solder Mask (Clearance=0.1mm) (IsPad),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="
+            dxpprocess://PCB:Zoom?
+                document=C:\Users\shawn\OneDrive\Shawn\circuitstudio projects\Pressure Sensor Breakout\Pressure Senor breakout Rev 2.CSPcbDoc;
+            
+                viewname=PCBEditor;
+            Action=AREA_DYNAMICZOOM|Location1.X=1866.079mil|Location2.X=2031.559mil|Location1.Y=2459.032mil|Location2.Y=2624.512mil|Absolute=True" class="callback" title="
+            dxpprocess://PCB:Zoom?
+                document=C:\Users\shawn\OneDrive\Shawn\circuitstudio projects\Pressure Sensor Breakout\Pressure Senor breakout Rev 2.CSPcbDoc;
+            
+                viewname=PCBEditor;
+            Action=AREA_DYNAMICZOOM|Location1.X=1866.079mil|Location2.X=2031.559mil|Location1.Y=2459.032mil|Location2.Y=2624.512mil|Absolute=True">Pad S1-(0mm,40.566mm)  Multi-Layer</a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="
+            dxpprocess://PCB:Zoom?
+                document=C:\Users\shawn\OneDrive\Shawn\circuitstudio projects\Pressure Sensor Breakout\Pressure Senor breakout Rev 2.CSPcbDoc;
+            
+                viewname=PCBEditor;
+            Action=AREA_DYNAMICZOOM|Location1.X=1849.849mil|Location2.X=2047.789mil|Location1.Y=2442.801mil|Location2.Y=2640.742mil|Absolute=True" class="callback" title="
+            dxpprocess://PCB:Zoom?
+                document=C:\Users\shawn\OneDrive\Shawn\circuitstudio projects\Pressure Sensor Breakout\Pressure Senor breakout Rev 2.CSPcbDoc;
+            
+                viewname=PCBEditor;
+            Action=AREA_DYNAMICZOOM|Location1.X=1849.849mil|Location2.X=2047.789mil|Location1.Y=2442.801mil|Location2.Y=2640.742mil|Absolute=True">Arc (0mm,40.566mm)  Top Overlay</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="
+            dxpprocess://PCB:Zoom?
+                document=C:\Users\shawn\OneDrive\Shawn\circuitstudio projects\Pressure Sensor Breakout\Pressure Senor breakout Rev 2.CSPcbDoc;
+            
+                viewname=PCBEditor;
+            Action=AREA_DYNAMICZOOM|Location1.X=968.543mil|Location2.X=1183.11mil|Location1.Y=2987.204mil|Location2.Y=2997.047mil|Absolute=True" class="callback" title="
+            dxpprocess://PCB:Zoom?
+                document=C:\Users\shawn\OneDrive\Shawn\circuitstudio projects\Pressure Sensor Breakout\Pressure Senor breakout Rev 2.CSPcbDoc;
+            
+                viewname=PCBEditor;
+            Action=AREA_DYNAMICZOOM|Location1.X=968.543mil|Location2.X=1183.11mil|Location1.Y=2987.204mil|Location2.Y=2997.047mil|Absolute=True">Track (-24.774mm,52.005mm)(-19.574mm,52.005mm)  Top Overlay</a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="
+            dxpprocess://PCB:Zoom?
+                document=C:\Users\shawn\OneDrive\Shawn\circuitstudio projects\Pressure Sensor Breakout\Pressure Senor breakout Rev 2.CSPcbDoc;
+            
+                viewname=PCBEditor;
+            Action=AREA_DYNAMICZOOM|Location1.X=1030.488mil|Location2.X=1121.166mil|Location1.Y=2896.59mil|Location2.Y=2987.267mil|Absolute=True" class="callback" title="
+            dxpprocess://PCB:Zoom?
+                document=C:\Users\shawn\OneDrive\Shawn\circuitstudio projects\Pressure Sensor Breakout\Pressure Senor breakout Rev 2.CSPcbDoc;
+            
+                viewname=PCBEditor;
+            Action=AREA_DYNAMICZOOM|Location1.X=1030.488mil|Location2.X=1121.166mil|Location1.Y=2896.59mil|Location2.Y=2987.267mil|Absolute=True">Pad D3-0(-22.174mm,50.73mm)  Multi-Layer</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="
+            dxpprocess://PCB:Zoom?
+                document=C:\Users\shawn\OneDrive\Shawn\circuitstudio projects\Pressure Sensor Breakout\Pressure Senor breakout Rev 2.CSPcbDoc;
+            
+                viewname=PCBEditor;
+            Action=AREA_DYNAMICZOOM|Location1.X=968.543mil|Location2.X=1183.11mil|Location1.Y=2987.204mil|Location2.Y=2997.047mil|Absolute=True" class="callback" title="
+            dxpprocess://PCB:Zoom?
+                document=C:\Users\shawn\OneDrive\Shawn\circuitstudio projects\Pressure Sensor Breakout\Pressure Senor breakout Rev 2.CSPcbDoc;
+            
+                viewname=PCBEditor;
+            Action=AREA_DYNAMICZOOM|Location1.X=968.543mil|Location2.X=1183.11mil|Location1.Y=2987.204mil|Location2.Y=2997.047mil|Absolute=True">Track (-24.774mm,52.005mm)(-19.574mm,52.005mm)  Top Overlay</a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="
+            dxpprocess://PCB:Zoom?
+                document=C:\Users\shawn\OneDrive\Shawn\circuitstudio projects\Pressure Sensor Breakout\Pressure Senor breakout Rev 2.CSPcbDoc;
+            
+                viewname=PCBEditor;
+            Action=AREA_DYNAMICZOOM|Location1.X=1030.488mil|Location2.X=1121.166mil|Location1.Y=2896.59mil|Location2.Y=2987.267mil|Absolute=True" class="callback" title="
+            dxpprocess://PCB:Zoom?
+                document=C:\Users\shawn\OneDrive\Shawn\circuitstudio projects\Pressure Sensor Breakout\Pressure Senor breakout Rev 2.CSPcbDoc;
+            
+                viewname=PCBEditor;
+            Action=AREA_DYNAMICZOOM|Location1.X=1030.488mil|Location2.X=1121.166mil|Location1.Y=2896.59mil|Location2.Y=2987.267mil|Absolute=True">Pad D3-0(-22.174mm,50.73mm)  Multi-Layer</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="
+            dxpprocess://PCB:Zoom?
+                document=C:\Users\shawn\OneDrive\Shawn\circuitstudio projects\Pressure Sensor Breakout\Pressure Senor breakout Rev 2.CSPcbDoc;
+            
+                viewname=PCBEditor;
+            Action=AREA_DYNAMICZOOM|Location1.X=1794.63mil|Location2.X=1964.582mil|Location1.Y=2439.457mil|Location2.Y=2519.437mil|Absolute=True" class="callback" title="
+            dxpprocess://PCB:Zoom?
+                document=C:\Users\shawn\OneDrive\Shawn\circuitstudio projects\Pressure Sensor Breakout\Pressure Senor breakout Rev 2.CSPcbDoc;
+            
+                viewname=PCBEditor;
+            Action=AREA_DYNAMICZOOM|Location1.X=1794.63mil|Location2.X=1964.582mil|Location1.Y=2439.457mil|Location2.Y=2519.437mil|Absolute=True">Text "R17" (-3.662mm,38.221mm)  Top Overlay</a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="
+            dxpprocess://PCB:Zoom?
+                document=C:\Users\shawn\OneDrive\Shawn\circuitstudio projects\Pressure Sensor Breakout\Pressure Senor breakout Rev 2.CSPcbDoc;
+            
+                viewname=PCBEditor;
+            Action=AREA_DYNAMICZOOM|Location1.X=1866.079mil|Location2.X=2031.559mil|Location1.Y=2459.032mil|Location2.Y=2624.512mil|Absolute=True" class="callback" title="
+            dxpprocess://PCB:Zoom?
+                document=C:\Users\shawn\OneDrive\Shawn\circuitstudio projects\Pressure Sensor Breakout\Pressure Senor breakout Rev 2.CSPcbDoc;
+            
+                viewname=PCBEditor;
+            Action=AREA_DYNAMICZOOM|Location1.X=1866.079mil|Location2.X=2031.559mil|Location1.Y=2459.032mil|Location2.Y=2624.512mil|Absolute=True">Pad S1-(0mm,40.566mm)  Multi-Layer</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="
+            dxpprocess://PCB:Zoom?
+                document=C:\Users\shawn\OneDrive\Shawn\circuitstudio projects\Pressure Sensor Breakout\Pressure Senor breakout Rev 2.CSPcbDoc;
+            
+                viewname=PCBEditor;
+            Action=AREA_DYNAMICZOOM|Location1.X=1238.543mil|Location2.X=1453.11mil|Location1.Y=2987.204mil|Location2.Y=2997.047mil|Absolute=True" class="callback" title="
+            dxpprocess://PCB:Zoom?
+                document=C:\Users\shawn\OneDrive\Shawn\circuitstudio projects\Pressure Sensor Breakout\Pressure Senor breakout Rev 2.CSPcbDoc;
+            
+                viewname=PCBEditor;
+            Action=AREA_DYNAMICZOOM|Location1.X=1238.543mil|Location2.X=1453.11mil|Location1.Y=2987.204mil|Location2.Y=2997.047mil|Absolute=True">Track (-17.916mm,52.005mm)(-12.716mm,52.005mm)  Top Overlay</a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="
+            dxpprocess://PCB:Zoom?
+                document=C:\Users\shawn\OneDrive\Shawn\circuitstudio projects\Pressure Sensor Breakout\Pressure Senor breakout Rev 2.CSPcbDoc;
+            
+                viewname=PCBEditor;
+            Action=AREA_DYNAMICZOOM|Location1.X=1300.488mil|Location2.X=1391.165mil|Location1.Y=2896.59mil|Location2.Y=2987.267mil|Absolute=True" class="callback" title="
+            dxpprocess://PCB:Zoom?
+                document=C:\Users\shawn\OneDrive\Shawn\circuitstudio projects\Pressure Sensor Breakout\Pressure Senor breakout Rev 2.CSPcbDoc;
+            
+                viewname=PCBEditor;
+            Action=AREA_DYNAMICZOOM|Location1.X=1300.488mil|Location2.X=1391.165mil|Location1.Y=2896.59mil|Location2.Y=2987.267mil|Absolute=True">Pad D1-0(-15.316mm,50.73mm)  Multi-Layer</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="
+            dxpprocess://PCB:Zoom?
+                document=C:\Users\shawn\OneDrive\Shawn\circuitstudio projects\Pressure Sensor Breakout\Pressure Senor breakout Rev 2.CSPcbDoc;
+            
+                viewname=PCBEditor;
+            Action=AREA_DYNAMICZOOM|Location1.X=1238.543mil|Location2.X=1453.11mil|Location1.Y=2987.204mil|Location2.Y=2997.047mil|Absolute=True" class="callback" title="
+            dxpprocess://PCB:Zoom?
+                document=C:\Users\shawn\OneDrive\Shawn\circuitstudio projects\Pressure Sensor Breakout\Pressure Senor breakout Rev 2.CSPcbDoc;
+            
+                viewname=PCBEditor;
+            Action=AREA_DYNAMICZOOM|Location1.X=1238.543mil|Location2.X=1453.11mil|Location1.Y=2987.204mil|Location2.Y=2997.047mil|Absolute=True">Track (-17.916mm,52.005mm)(-12.716mm,52.005mm)  Top Overlay</a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="
+            dxpprocess://PCB:Zoom?
+                document=C:\Users\shawn\OneDrive\Shawn\circuitstudio projects\Pressure Sensor Breakout\Pressure Senor breakout Rev 2.CSPcbDoc;
+            
+                viewname=PCBEditor;
+            Action=AREA_DYNAMICZOOM|Location1.X=1300.488mil|Location2.X=1391.165mil|Location1.Y=2896.59mil|Location2.Y=2987.267mil|Absolute=True" class="callback" title="
+            dxpprocess://PCB:Zoom?
+                document=C:\Users\shawn\OneDrive\Shawn\circuitstudio projects\Pressure Sensor Breakout\Pressure Senor breakout Rev 2.CSPcbDoc;
+            
+                viewname=PCBEditor;
+            Action=AREA_DYNAMICZOOM|Location1.X=1300.488mil|Location2.X=1391.165mil|Location1.Y=2896.59mil|Location2.Y=2987.267mil|Absolute=True">Pad D1-0(-15.316mm,50.73mm)  Multi-Layer</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="
+            dxpprocess://PCB:Zoom?
+                document=C:\Users\shawn\OneDrive\Shawn\circuitstudio projects\Pressure Sensor Breakout\Pressure Senor breakout Rev 2.CSPcbDoc;
+            
+                viewname=PCBEditor;
+            Action=AREA_DYNAMICZOOM|Location1.X=1794.63mil|Location2.X=1964.582mil|Location1.Y=2439.457mil|Location2.Y=2519.437mil|Absolute=True" class="callback" title="
+            dxpprocess://PCB:Zoom?
+                document=C:\Users\shawn\OneDrive\Shawn\circuitstudio projects\Pressure Sensor Breakout\Pressure Senor breakout Rev 2.CSPcbDoc;
+            
+                viewname=PCBEditor;
+            Action=AREA_DYNAMICZOOM|Location1.X=1794.63mil|Location2.X=1964.582mil|Location1.Y=2439.457mil|Location2.Y=2519.437mil|Absolute=True">Text "R17" (-3.662mm,38.221mm)  Top Overlay</a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="
+            dxpprocess://PCB:Zoom?
+                document=C:\Users\shawn\OneDrive\Shawn\circuitstudio projects\Pressure Sensor Breakout\Pressure Senor breakout Rev 2.CSPcbDoc;
+            
+                viewname=PCBEditor;
+            Action=AREA_DYNAMICZOOM|Location1.X=1727.299mil|Location2.X=1825.851mil|Location1.Y=2475.961mil|Location2.Y=2507.583mil|Absolute=True" class="callback" title="
+            dxpprocess://PCB:Zoom?
+                document=C:\Users\shawn\OneDrive\Shawn\circuitstudio projects\Pressure Sensor Breakout\Pressure Senor breakout Rev 2.CSPcbDoc;
+            
+                viewname=PCBEditor;
+            Action=AREA_DYNAMICZOOM|Location1.X=1727.299mil|Location2.X=1825.851mil|Location1.Y=2475.961mil|Location2.Y=2507.583mil|Absolute=True">Pad S1-6(-4.375mm,39.296mm)  Top Layer</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="
+            dxpprocess://PCB:Zoom?
+                document=C:\Users\shawn\OneDrive\Shawn\circuitstudio projects\Pressure Sensor Breakout\Pressure Senor breakout Rev 2.CSPcbDoc;
+            
+                viewname=PCBEditor;
+            Action=AREA_DYNAMICZOOM|Location1.X=717.402mil|Location2.X=1017.311mil|Location1.Y=2703.78mil|Location2.Y=2783.76mil|Absolute=True" class="callback" title="
+            dxpprocess://PCB:Zoom?
+                document=C:\Users\shawn\OneDrive\Shawn\circuitstudio projects\Pressure Sensor Breakout\Pressure Senor breakout Rev 2.CSPcbDoc;
+            
+                viewname=PCBEditor;
+            Action=AREA_DYNAMICZOOM|Location1.X=717.402mil|Location2.X=1017.311mil|Location1.Y=2703.78mil|Location2.Y=2783.76mil|Absolute=True">Text "Rev 2" (-31.024mm,44.935mm)  Top Overlay</a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="
+            dxpprocess://PCB:Zoom?
+                document=C:\Users\shawn\OneDrive\Shawn\circuitstudio projects\Pressure Sensor Breakout\Pressure Senor breakout Rev 2.CSPcbDoc;
+            
+                viewname=PCBEditor;
+            Action=AREA_DYNAMICZOOM|Location1.X=993.638mil|Location2.X=1029.197mil|Location1.Y=2702.181mil|Location2.Y=2761.362mil|Absolute=True" class="callback" title="
+            dxpprocess://PCB:Zoom?
+                document=C:\Users\shawn\OneDrive\Shawn\circuitstudio projects\Pressure Sensor Breakout\Pressure Senor breakout Rev 2.CSPcbDoc;
+            
+                viewname=PCBEditor;
+            Action=AREA_DYNAMICZOOM|Location1.X=993.638mil|Location2.X=1029.197mil|Location1.Y=2702.181mil|Location2.Y=2761.362mil|Absolute=True">Pad R22-2(-23.81mm,45.392mm)  Top Layer</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="
+            dxpprocess://PCB:Zoom?
+                document=C:\Users\shawn\OneDrive\Shawn\circuitstudio projects\Pressure Sensor Breakout\Pressure Senor breakout Rev 2.CSPcbDoc;
+            
+                viewname=PCBEditor;
+            Action=AREA_DYNAMICZOOM|Location1.X=826.141mil|Location2.X=834.015mil|Location1.Y=2448.031mil|Location2.Y=2515.748mil|Absolute=True" class="callback" title="
+            dxpprocess://PCB:Zoom?
+                document=C:\Users\shawn\OneDrive\Shawn\circuitstudio projects\Pressure Sensor Breakout\Pressure Senor breakout Rev 2.CSPcbDoc;
+            
+                viewname=PCBEditor;
+            Action=AREA_DYNAMICZOOM|Location1.X=826.141mil|Location2.X=834.015mil|Location1.Y=2448.031mil|Location2.Y=2515.748mil|Absolute=True">Track (-28.416mm,38.285mm)(-28.416mm,39.805mm)  Top Overlay</a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="
+            dxpprocess://PCB:Zoom?
+                document=C:\Users\shawn\OneDrive\Shawn\circuitstudio projects\Pressure Sensor Breakout\Pressure Senor breakout Rev 2.CSPcbDoc;
+            
+                viewname=PCBEditor;
+            Action=AREA_DYNAMICZOOM|Location1.X=833.559mil|Location2.X=889.59mil|Location1.Y=2463.716mil|Location2.Y=2507.543mil|Absolute=True" class="callback" title="
+            dxpprocess://PCB:Zoom?
+                document=C:\Users\shawn\OneDrive\Shawn\circuitstudio projects\Pressure Sensor Breakout\Pressure Senor breakout Rev 2.CSPcbDoc;
+            
+                viewname=PCBEditor;
+            Action=AREA_DYNAMICZOOM|Location1.X=833.559mil|Location2.X=889.59mil|Location1.Y=2463.716mil|Location2.Y=2507.543mil|Absolute=True">Pad D2-1(-27.616mm,39.14mm)  Top Layer</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="
+            dxpprocess://PCB:Zoom?
+                document=C:\Users\shawn\OneDrive\Shawn\circuitstudio projects\Pressure Sensor Breakout\Pressure Senor breakout Rev 2.CSPcbDoc;
+            
+                viewname=PCBEditor;
+            Action=AREA_DYNAMICZOOM|Location1.X=889.134mil|Location2.X=897.008mil|Location1.Y=2448.031mil|Location2.Y=2515.748mil|Absolute=True" class="callback" title="
+            dxpprocess://PCB:Zoom?
+                document=C:\Users\shawn\OneDrive\Shawn\circuitstudio projects\Pressure Sensor Breakout\Pressure Senor breakout Rev 2.CSPcbDoc;
+            
+                viewname=PCBEditor;
+            Action=AREA_DYNAMICZOOM|Location1.X=889.134mil|Location2.X=897.008mil|Location1.Y=2448.031mil|Location2.Y=2515.748mil|Absolute=True">Track (-26.816mm,38.285mm)(-26.816mm,39.805mm)  Top Overlay</a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="
+            dxpprocess://PCB:Zoom?
+                document=C:\Users\shawn\OneDrive\Shawn\circuitstudio projects\Pressure Sensor Breakout\Pressure Senor breakout Rev 2.CSPcbDoc;
+            
+                viewname=PCBEditor;
+            Action=AREA_DYNAMICZOOM|Location1.X=833.559mil|Location2.X=889.59mil|Location1.Y=2463.716mil|Location2.Y=2507.543mil|Absolute=True" class="callback" title="
+            dxpprocess://PCB:Zoom?
+                document=C:\Users\shawn\OneDrive\Shawn\circuitstudio projects\Pressure Sensor Breakout\Pressure Senor breakout Rev 2.CSPcbDoc;
+            
+                viewname=PCBEditor;
+            Action=AREA_DYNAMICZOOM|Location1.X=833.559mil|Location2.X=889.59mil|Location1.Y=2463.716mil|Location2.Y=2507.543mil|Absolute=True">Pad D2-1(-27.616mm,39.14mm)  Top Layer</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="
+            dxpprocess://PCB:Zoom?
+                document=C:\Users\shawn\OneDrive\Shawn\circuitstudio projects\Pressure Sensor Breakout\Pressure Senor breakout Rev 2.CSPcbDoc;
+            
+                viewname=PCBEditor;
+            Action=AREA_DYNAMICZOOM|Location1.X=826.141mil|Location2.X=897.008mil|Location1.Y=2456.693mil|Location2.Y=2464.566mil|Absolute=True" class="callback" title="
+            dxpprocess://PCB:Zoom?
+                document=C:\Users\shawn\OneDrive\Shawn\circuitstudio projects\Pressure Sensor Breakout\Pressure Senor breakout Rev 2.CSPcbDoc;
+            
+                viewname=PCBEditor;
+            Action=AREA_DYNAMICZOOM|Location1.X=826.141mil|Location2.X=897.008mil|Location1.Y=2456.693mil|Location2.Y=2464.566mil|Absolute=True">Track (-28.416mm,38.505mm)(-26.816mm,38.505mm)  Top Overlay</a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="
+            dxpprocess://PCB:Zoom?
+                document=C:\Users\shawn\OneDrive\Shawn\circuitstudio projects\Pressure Sensor Breakout\Pressure Senor breakout Rev 2.CSPcbDoc;
+            
+                viewname=PCBEditor;
+            Action=AREA_DYNAMICZOOM|Location1.X=833.559mil|Location2.X=889.59mil|Location1.Y=2463.716mil|Location2.Y=2507.543mil|Absolute=True" class="callback" title="
+            dxpprocess://PCB:Zoom?
+                document=C:\Users\shawn\OneDrive\Shawn\circuitstudio projects\Pressure Sensor Breakout\Pressure Senor breakout Rev 2.CSPcbDoc;
+            
+                viewname=PCBEditor;
+            Action=AREA_DYNAMICZOOM|Location1.X=833.559mil|Location2.X=889.59mil|Location1.Y=2463.716mil|Location2.Y=2507.543mil|Absolute=True">Pad D2-1(-27.616mm,39.14mm)  Top Layer</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="
+            dxpprocess://PCB:Zoom?
+                document=C:\Users\shawn\OneDrive\Shawn\circuitstudio projects\Pressure Sensor Breakout\Pressure Senor breakout Rev 2.CSPcbDoc;
+            
+                viewname=PCBEditor;
+            Action=AREA_DYNAMICZOOM|Location1.X=826.141mil|Location2.X=834.015mil|Location1.Y=2326.771mil|Location2.Y=2394.488mil|Absolute=True" class="callback" title="
+            dxpprocess://PCB:Zoom?
+                document=C:\Users\shawn\OneDrive\Shawn\circuitstudio projects\Pressure Sensor Breakout\Pressure Senor breakout Rev 2.CSPcbDoc;
+            
+                viewname=PCBEditor;
+            Action=AREA_DYNAMICZOOM|Location1.X=826.141mil|Location2.X=834.015mil|Location1.Y=2326.771mil|Location2.Y=2394.488mil|Absolute=True">Track (-28.416mm,35.205mm)(-28.416mm,36.725mm)  Top Overlay</a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="
+            dxpprocess://PCB:Zoom?
+                document=C:\Users\shawn\OneDrive\Shawn\circuitstudio projects\Pressure Sensor Breakout\Pressure Senor breakout Rev 2.CSPcbDoc;
+            
+                viewname=PCBEditor;
+            Action=AREA_DYNAMICZOOM|Location1.X=833.559mil|Location2.X=889.59mil|Location1.Y=2334.976mil|Location2.Y=2378.803mil|Absolute=True" class="callback" title="
+            dxpprocess://PCB:Zoom?
+                document=C:\Users\shawn\OneDrive\Shawn\circuitstudio projects\Pressure Sensor Breakout\Pressure Senor breakout Rev 2.CSPcbDoc;
+            
+                viewname=PCBEditor;
+            Action=AREA_DYNAMICZOOM|Location1.X=833.559mil|Location2.X=889.59mil|Location1.Y=2334.976mil|Location2.Y=2378.803mil|Absolute=True">Pad D2-2(-27.616mm,35.87mm)  Top Layer</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="
+            dxpprocess://PCB:Zoom?
+                document=C:\Users\shawn\OneDrive\Shawn\circuitstudio projects\Pressure Sensor Breakout\Pressure Senor breakout Rev 2.CSPcbDoc;
+            
+                viewname=PCBEditor;
+            Action=AREA_DYNAMICZOOM|Location1.X=889.134mil|Location2.X=897.008mil|Location1.Y=2326.771mil|Location2.Y=2394.488mil|Absolute=True" class="callback" title="
+            dxpprocess://PCB:Zoom?
+                document=C:\Users\shawn\OneDrive\Shawn\circuitstudio projects\Pressure Sensor Breakout\Pressure Senor breakout Rev 2.CSPcbDoc;
+            
+                viewname=PCBEditor;
+            Action=AREA_DYNAMICZOOM|Location1.X=889.134mil|Location2.X=897.008mil|Location1.Y=2326.771mil|Location2.Y=2394.488mil|Absolute=True">Track (-26.816mm,35.205mm)(-26.816mm,36.725mm)  Top Overlay</a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="
+            dxpprocess://PCB:Zoom?
+                document=C:\Users\shawn\OneDrive\Shawn\circuitstudio projects\Pressure Sensor Breakout\Pressure Senor breakout Rev 2.CSPcbDoc;
+            
+                viewname=PCBEditor;
+            Action=AREA_DYNAMICZOOM|Location1.X=833.559mil|Location2.X=889.59mil|Location1.Y=2334.976mil|Location2.Y=2378.803mil|Absolute=True" class="callback" title="
+            dxpprocess://PCB:Zoom?
+                document=C:\Users\shawn\OneDrive\Shawn\circuitstudio projects\Pressure Sensor Breakout\Pressure Senor breakout Rev 2.CSPcbDoc;
+            
+                viewname=PCBEditor;
+            Action=AREA_DYNAMICZOOM|Location1.X=833.559mil|Location2.X=889.59mil|Location1.Y=2334.976mil|Location2.Y=2378.803mil|Absolute=True">Pad D2-2(-27.616mm,35.87mm)  Top Layer</a></td>
+</tr>
+</table></a><br><a href="#top">Back to top</a><br><br><a name="ID3NZ14XOHT55KFLWPIGXRAQLFRDWZZLZ5QCXLMFB0SF4C50MQA3ZJ"><table>
+<tr>
+<th style="text-align : left" colspan="2" class="rule">Silk to Silk (Clearance=0.1mm) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="
+            dxpprocess://PCB:Zoom?
+                document=C:\Users\shawn\OneDrive\Shawn\circuitstudio projects\Pressure Sensor Breakout\Pressure Senor breakout Rev 2.CSPcbDoc;
+            
+                viewname=PCBEditor;
+            Action=AREA_DYNAMICZOOM|Location1.X=1794.63mil|Location2.X=1964.582mil|Location1.Y=2439.457mil|Location2.Y=2519.437mil|Absolute=True" class="callback" title="
+            dxpprocess://PCB:Zoom?
+                document=C:\Users\shawn\OneDrive\Shawn\circuitstudio projects\Pressure Sensor Breakout\Pressure Senor breakout Rev 2.CSPcbDoc;
+            
+                viewname=PCBEditor;
+            Action=AREA_DYNAMICZOOM|Location1.X=1794.63mil|Location2.X=1964.582mil|Location1.Y=2439.457mil|Location2.Y=2519.437mil|Absolute=True">Text "R17" (-3.662mm,38.221mm)  Top Overlay</a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="
+            dxpprocess://PCB:Zoom?
+                document=C:\Users\shawn\OneDrive\Shawn\circuitstudio projects\Pressure Sensor Breakout\Pressure Senor breakout Rev 2.CSPcbDoc;
+            
+                viewname=PCBEditor;
+            Action=AREA_DYNAMICZOOM|Location1.X=1849.849mil|Location2.X=2047.789mil|Location1.Y=2442.801mil|Location2.Y=2640.742mil|Absolute=True" class="callback" title="
+            dxpprocess://PCB:Zoom?
+                document=C:\Users\shawn\OneDrive\Shawn\circuitstudio projects\Pressure Sensor Breakout\Pressure Senor breakout Rev 2.CSPcbDoc;
+            
+                viewname=PCBEditor;
+            Action=AREA_DYNAMICZOOM|Location1.X=1849.849mil|Location2.X=2047.789mil|Location1.Y=2442.801mil|Location2.Y=2640.742mil|Absolute=True">Arc (0mm,40.566mm)  Top Overlay</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="
+            dxpprocess://PCB:Zoom?
+                document=C:\Users\shawn\OneDrive\Shawn\circuitstudio projects\Pressure Sensor Breakout\Pressure Senor breakout Rev 2.CSPcbDoc;
+            
+                viewname=PCBEditor;
+            Action=AREA_DYNAMICZOOM|Location1.X=717.402mil|Location2.X=1017.311mil|Location1.Y=2703.78mil|Location2.Y=2783.76mil|Absolute=True" class="callback" title="
+            dxpprocess://PCB:Zoom?
+                document=C:\Users\shawn\OneDrive\Shawn\circuitstudio projects\Pressure Sensor Breakout\Pressure Senor breakout Rev 2.CSPcbDoc;
+            
+                viewname=PCBEditor;
+            Action=AREA_DYNAMICZOOM|Location1.X=717.402mil|Location2.X=1017.311mil|Location1.Y=2703.78mil|Location2.Y=2783.76mil|Absolute=True">Text "Rev 2" (-31.024mm,44.935mm)  Top Overlay</a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="
+            dxpprocess://PCB:Zoom?
+                document=C:\Users\shawn\OneDrive\Shawn\circuitstudio projects\Pressure Sensor Breakout\Pressure Senor breakout Rev 2.CSPcbDoc;
+            
+                viewname=PCBEditor;
+            Action=AREA_DYNAMICZOOM|Location1.X=987.795mil|Location2.X=1015.355mil|Location1.Y=2765.236mil|Location2.Y=2769.173mil|Absolute=True" class="callback" title="
+            dxpprocess://PCB:Zoom?
+                document=C:\Users\shawn\OneDrive\Shawn\circuitstudio projects\Pressure Sensor Breakout\Pressure Senor breakout Rev 2.CSPcbDoc;
+            
+                viewname=PCBEditor;
+            Action=AREA_DYNAMICZOOM|Location1.X=987.795mil|Location2.X=1015.355mil|Location1.Y=2765.236mil|Location2.Y=2769.173mil|Absolute=True">Track (-24.36mm,46.292mm)(-23.76mm,46.292mm)  Top Overlay</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="
+            dxpprocess://PCB:Zoom?
+                document=C:\Users\shawn\OneDrive\Shawn\circuitstudio projects\Pressure Sensor Breakout\Pressure Senor breakout Rev 2.CSPcbDoc;
+            
+                viewname=PCBEditor;
+            Action=AREA_DYNAMICZOOM|Location1.X=717.402mil|Location2.X=1017.311mil|Location1.Y=2703.78mil|Location2.Y=2783.76mil|Absolute=True" class="callback" title="
+            dxpprocess://PCB:Zoom?
+                document=C:\Users\shawn\OneDrive\Shawn\circuitstudio projects\Pressure Sensor Breakout\Pressure Senor breakout Rev 2.CSPcbDoc;
+            
+                viewname=PCBEditor;
+            Action=AREA_DYNAMICZOOM|Location1.X=717.402mil|Location2.X=1017.311mil|Location1.Y=2703.78mil|Location2.Y=2783.76mil|Absolute=True">Text "Rev 2" (-31.024mm,44.935mm)  Top Overlay</a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="
+            dxpprocess://PCB:Zoom?
+                document=C:\Users\shawn\OneDrive\Shawn\circuitstudio projects\Pressure Sensor Breakout\Pressure Senor breakout Rev 2.CSPcbDoc;
+            
+                viewname=PCBEditor;
+            Action=AREA_DYNAMICZOOM|Location1.X=987.795mil|Location2.X=991.732mil|Location1.Y=2694.37mil|Location2.Y=2769.173mil|Absolute=True" class="callback" title="
+            dxpprocess://PCB:Zoom?
+                document=C:\Users\shawn\OneDrive\Shawn\circuitstudio projects\Pressure Sensor Breakout\Pressure Senor breakout Rev 2.CSPcbDoc;
+            
+                viewname=PCBEditor;
+            Action=AREA_DYNAMICZOOM|Location1.X=987.795mil|Location2.X=991.732mil|Location1.Y=2694.37mil|Location2.Y=2769.173mil|Absolute=True">Track (-24.36mm,44.492mm)(-24.36mm,46.292mm)  Top Overlay</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="
+            dxpprocess://PCB:Zoom?
+                document=C:\Users\shawn\OneDrive\Shawn\circuitstudio projects\Pressure Sensor Breakout\Pressure Senor breakout Rev 2.CSPcbDoc;
+            
+                viewname=PCBEditor;
+            Action=AREA_DYNAMICZOOM|Location1.X=741.024mil|Location2.X=980.952mil|Location1.Y=2597.48mil|Location2.Y=2677.461mil|Absolute=True" class="callback" title="
+            dxpprocess://PCB:Zoom?
+                document=C:\Users\shawn\OneDrive\Shawn\circuitstudio projects\Pressure Sensor Breakout\Pressure Senor breakout Rev 2.CSPcbDoc;
+            
+                viewname=PCBEditor;
+            Action=AREA_DYNAMICZOOM|Location1.X=741.024mil|Location2.X=980.952mil|Location1.Y=2597.48mil|Location2.Y=2677.461mil|Absolute=True">Text "2020" (-30.424mm,42.235mm)  Top Overlay</a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="
+            dxpprocess://PCB:Zoom?
+                document=C:\Users\shawn\OneDrive\Shawn\circuitstudio projects\Pressure Sensor Breakout\Pressure Senor breakout Rev 2.CSPcbDoc;
+            
+                viewname=PCBEditor;
+            Action=AREA_DYNAMICZOOM|Location1.X=968.882mil|Location2.X=1118.756mil|Location1.Y=2602.835mil|Location2.Y=2610.709mil|Absolute=True" class="callback" title="
+            dxpprocess://PCB:Zoom?
+                document=C:\Users\shawn\OneDrive\Shawn\circuitstudio projects\Pressure Sensor Breakout\Pressure Senor breakout Rev 2.CSPcbDoc;
+            
+                viewname=PCBEditor;
+            Action=AREA_DYNAMICZOOM|Location1.X=968.882mil|Location2.X=1118.756mil|Location1.Y=2602.835mil|Location2.Y=2610.709mil|Absolute=True">Track (-24.79mm,42.217mm)(-21.184mm,42.217mm)  Top Overlay</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="
+            dxpprocess://PCB:Zoom?
+                document=C:\Users\shawn\OneDrive\Shawn\circuitstudio projects\Pressure Sensor Breakout\Pressure Senor breakout Rev 2.CSPcbDoc;
+            
+                viewname=PCBEditor;
+            Action=AREA_DYNAMICZOOM|Location1.X=741.024mil|Location2.X=980.952mil|Location1.Y=2597.48mil|Location2.Y=2677.461mil|Absolute=True" class="callback" title="
+            dxpprocess://PCB:Zoom?
+                document=C:\Users\shawn\OneDrive\Shawn\circuitstudio projects\Pressure Sensor Breakout\Pressure Senor breakout Rev 2.CSPcbDoc;
+            
+                viewname=PCBEditor;
+            Action=AREA_DYNAMICZOOM|Location1.X=741.024mil|Location2.X=980.952mil|Location1.Y=2597.48mil|Location2.Y=2677.461mil|Absolute=True">Text "2020" (-30.424mm,42.235mm)  Top Overlay</a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="
+            dxpprocess://PCB:Zoom?
+                document=C:\Users\shawn\OneDrive\Shawn\circuitstudio projects\Pressure Sensor Breakout\Pressure Senor breakout Rev 2.CSPcbDoc;
+            
+                viewname=PCBEditor;
+            Action=AREA_DYNAMICZOOM|Location1.X=968.882mil|Location2.X=976.756mil|Location1.Y=2602.835mil|Location2.Y=2690.709mil|Absolute=True" class="callback" title="
+            dxpprocess://PCB:Zoom?
+                document=C:\Users\shawn\OneDrive\Shawn\circuitstudio projects\Pressure Sensor Breakout\Pressure Senor breakout Rev 2.CSPcbDoc;
+            
+                viewname=PCBEditor;
+            Action=AREA_DYNAMICZOOM|Location1.X=968.882mil|Location2.X=976.756mil|Location1.Y=2602.835mil|Location2.Y=2690.709mil|Absolute=True">Track (-24.79mm,42.217mm)(-24.79mm,44.249mm)  Top Overlay</a></td>
+</tr>
+</table></a><br><a href="#top">Back to top</a><br><br></body>
+</html>
